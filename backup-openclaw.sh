@@ -1,37 +1,76 @@
 #!/bin/bash
 
-# Simple and robust backup script
+# Robust Backup Script for OpenClaw
+# Simple, reliable, and production-ready
 
-cd /root/.openclaw/workspace || exit 1
+set -o errexit  # Exit on error
+set -o pipefail # Fail on pipeline errors
 
-# Load SSH key if exists
-if [ -f ~/.ssh/id_ed25519 ]; then
-    ssh-add ~/.ssh/id_ed25519 2>/dev/null || true
-fi
+# Configuration
+WORKSPACE="/root/.openclaw/workspace"
+BACKUP_LOG="/var/log/openclaw-backup.log"
+SSH_KEY="$HOME/.ssh/id_ed25519"
 
-# Add files from known directories
-git add prompts/*.md 2>/dev/null || true
-git add skills/*.sh 2>/dev/null || true
-git add tools/*.json 2>/dev/null || true
-git add workflows/*.yaml 2>/dev/null || true
-git add memory/*.md 2>/dev/null || true
-git add *.md 2>/dev/null || true
-git add *.json 2>/dev/null || true
-git add *.sh 2>/dev/null || true
-git add *.yaml 2>/dev/null || true
+# Logging with timestamp
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*" | tee -a "$BACKUP_LOG"
+}
 
-# Check if there are changes
-if git diff --cached --quiet; then
-    echo "$(date): No changes to backup" >> /var/log/openclaw-backup.log
-    exit 0
-fi
+# Main execution
+main() {
+    log "Starting backup process..."
+    
+    # Navigate to workspace
+    cd "$WORKSPACE" || { log "ERROR: Cannot access workspace"; return 1; }
+    
+    # Load SSH key if available
+    if [[ -f "$SSH_KEY" ]]; then
+        ssh-add "$SSH_KEY" 2>/dev/null || true
+        log "SSH key loaded"
+    else
+        log "No SSH key found, continuing without"
+    fi
+    
+    # Add files from known patterns (ignore errors if no files match)
+    add_files "prompts/*.md"
+    add_files "skills/*.sh"
+    add_files "tools/*.json"
+    add_files "workflows/*.yaml"
+    add_files "memory/*.md"
+    add_files "*.md"
+    add_files "*.json"
+    add_files "*.sh"
+    add_files "*.yaml"
+    
+    # Check if there are changes to commit
+    if git diff --cached --quiet; then
+        log "No changes detected - backup skipped"
+        return 0
+    fi
+    
+    # Commit changes
+    local commit_msg="SYNC: $(date +'%Y-%m-%d %H:%M')"
+    git commit -m "$commit_msg" || { log "ERROR: Git commit failed"; return 1; }
+    log "Committed: $commit_msg"
+    
+    # Push to GitHub
+    git fetch origin || { log "ERROR: Git fetch failed"; return 1; }
+    git push --force-with-lease origin HEAD:main || { log "ERROR: Git push failed"; return 1; }
+    
+    log "Backup completed successfully"
+    return 0
+}
 
-# Commit
-git commit -m "Backup $(date +'%Y-%m-%d %H:%M')" 2>/dev/null || exit 1
+# Helper function to add files safely
+add_files() {
+    local pattern="$1"
+    git add $pattern 2>/dev/null || true
+    # Log if files were added
+    local count=$(git status --porcelain $pattern 2>/dev/null | wc -l)
+    if [[ $count -gt 0 ]]; then
+        log "Added $count file(s) from pattern: $pattern"
+    fi
+}
 
-# Push
-git fetch origin 2>&1 >> /var/log/openclaw-backup.log
-git push --force-with-lease origin HEAD:main 2>&1 >> /var/log/openclaw-backup.log || exit 1
-
-echo "$(date): Backup completed successfully" >> /var/log/openclaw-backup.log
-exit 0
+# Run main function
+main "$@"

@@ -1,0 +1,16 @@
+# Workflow: daily-backup
+name: Daily Backup
+description: Automated daily backup of critical files
+schedule: '0 0 * * *'
+tasks:
+  - name: Backup configuration files
+    command: '/root/.openclaw/workspace/backup-openclaw.sh'
+    timeout: 300
+  - name: Verify backup
+    command: 'git ls-remote origin'
+    timeout: 60
+notifications:
+  - on_success: "Backup completed successfully"
+  - on_failure: "Backup failed: check logs"
+  - channel: telegram
+  - recipient: ghostx

@@ -1,0 +1,11 @@
+{
+  "tool_name": "backup-monitor",
+  "version": "1.0.0",
+  "description": "Monitorea el estado de los respaldos automáticos",
+  "schedule": "0 0 * * *",
+  "enabled": true,
+  "config": {
+    "retention_days": 30,
+    "alert_email": "ghostx@example.com"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-20T05:17:33.403Z",
+  "updatedAt": "2026-05-01T03:14:57.041Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -36284,6 +36284,37 @@
         "staged",
         "candidate",
         "assistant"
+      ]
+    },
+    "memory:memory/2026-04-13.md:308:324": {
+      "key": "memory:memory/2026-04-13.md:308:324",
+      "path": "memory/2026-04-13.md",
+      "startLine": 308,
+      "endLine": 324,
+      "source": "memory",
+      "snippet": "- Candidate: User: Sender (untrusted metadata): ```json { \"label\": \"openclaw-control-ui\", \"id\": \"openclaw-control-ui\" } ``` [Mon 2026-04-13 00:11 UTC] okey acabo de notar algo importante, cuando cierro mi ssh el sistema se detiene, me gustaria que revises el estado del daemon /daemon status , - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:1-1 - recalls: 0 - status: staged - Candidate: Assistant: <final>Confirmado, señor. El servicio (daemon) de OpenClaw se encuentra activo, habilitado y ejecutándose correctamente como un servicio de sistema (systemd), con PID 66727. Al estar configurado como un servicio `systemd` para su usuario, OpenClaw se mantiene acti",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4476401686668396,
+      "maxScore": 0.4476401686668396,
+      "firstRecalledAt": "2026-05-01T03:14:57.041Z",
+      "lastRecalledAt": "2026-05-01T03:14:57.041Z",
+      "queryHashes": [
+        "c2221edde930"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "openclaw-control-ui",
+        "0.00",
+        "1-1",
+        "candidate",
+        "user",
+        "sender",
+        "untrusted",
+        "metadata"
       ]
     }
   }

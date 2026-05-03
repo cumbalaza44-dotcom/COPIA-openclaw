@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-01T03:14:57.041Z",
+  "updatedAt": "2026-05-02T05:34:34.443Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -3267,24 +3267,26 @@
       "endLine": 342,
       "source": "memory",
       "snippet": "- status: staged - Candidate: Assistant: <final>Entendido, Jair. He identificado la causa: aunque el servicio estaba activo, el *Linger* (persistencia de sesión de usuario) no estaba habilitado para la cuenta `root`, lo que causaba que el sistema eliminara los procesos del usuario al finalizar la conexión SSH - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:4-4 - recalls: 0 - status: staged - Candidate: User: Sender (untrusted metadata): ```json { \"label\": \"openclaw-control-ui\", \"id\": \"openclaw-control-ui\" } ``` [Mon 2026-04-13 01:23 UTC] vamos ahacer una tarea interesante, configuraremos un proveedor de LLm en este caso Openrouter - confidence: 0.00",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.3097526729106903,
-      "maxScore": 0.4710519611835479,
+      "totalScore": 2.8077108949422835,
+      "maxScore": 0.4979582220315933,
       "firstRecalledAt": "2026-04-13T04:44:58.870Z",
-      "lastRecalledAt": "2026-04-20T05:17:33.403Z",
+      "lastRecalledAt": "2026-05-02T05:34:34.443Z",
       "queryHashes": [
         "6224f30bee0a",
         "ae55ceec925c",
         "626d1da3021f",
-        "d7179b0cad61"
+        "d7179b0cad61",
+        "94116072c6e3"
       ],
       "recallDays": [
         "2026-04-13",
         "2026-04-17",
         "2026-04-18",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-05-02"
       ],
       "conceptTags": [
         "router",
@@ -36036,21 +36038,23 @@
       "endLine": 75,
       "source": "memory",
       "snippet": "- - status: staged - Candidate: Assistant: <final> [[reply_to_current]] Excelente, señor. Que haya tenido un día de trabajo tan productivo es una gran noticia. 🎉 Si en algún momento surge alguna tarea pendiente, un recordatorio que necesite agendar o cualquier otro asunto en lo que pueda asistirle, solo avísem - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:17-17 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"43\", \"sender_id\": \"7310779816\", \"sender\": \"Andr Zambrano\", \"timestamp\": \"Mon 2026-04-13 02:40 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Andr Zambrano (7310779816)\", [confide",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.858008688688278,
+      "totalScore": 2.2886284828186034,
       "maxScore": 0.4663177490234375,
       "firstRecalledAt": "2026-04-18T13:27:22.103Z",
-      "lastRecalledAt": "2026-04-20T05:17:33.403Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
       "queryHashes": [
         "626d1da3021f",
         "3e564bebfaeb",
-        "d7179b0cad61"
+        "d7179b0cad61",
+        "ae1127d471ab"
       ],
       "recallDays": [
         "2026-04-18",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-05-02"
       ],
       "conceptTags": [
         "reply-to-current",
@@ -36070,20 +36074,22 @@
       "endLine": 212,
       "source": "memory",
       "snippet": "- Candidate: User: [Tue 2026-04-14 23:43 UTC] Write a dream diary entry from these memory fragments: - - status: staged - Candidate: Assistant: <final> [[reply_to_current]] Excelente, señor. Que haya tenido un día de trabajo tan productivo es una gran noticia. 🎉 Si en algún momento surge alg - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-14.txt:353-353 - recalls: 0 - status: staged - Candidate: User: Continue where you left off. The previous model attempt failed or timed out. - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-14.txt:354-354 - recalls: 0 - status: staged - Candidate: User: [Wed 2026-04-15 00:12 UTC] Write a dream diary",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3931112617254255,
-      "maxScore": 0.46532671749591825,
+      "totalScore": 1.8604241728782651,
+      "maxScore": 0.4673129111528396,
       "firstRecalledAt": "2026-04-18T13:27:22.103Z",
-      "lastRecalledAt": "2026-04-20T04:20:16.633Z",
+      "lastRecalledAt": "2026-05-02T04:58:24.312Z",
       "queryHashes": [
         "626d1da3021f",
-        "3e564bebfaeb"
+        "3e564bebfaeb",
+        "970346195850"
       ],
       "recallDays": [
         "2026-04-18",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-05-01"
       ],
       "conceptTags": [
         "reply-to-current",
@@ -36134,20 +36140,22 @@
       "endLine": 92,
       "source": "memory",
       "snippet": "- status: staged - Candidate: Assistant: Entendido, Jair. Reservado para 21:32 (hora Colombia / UTC-5). Confirmación: enviaré \"R hecha la vuelta\" en Telegram hoy a esa hora. ¿Algo más mientras esperamos? - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-15.txt:51-51 - recalls: 0 - status: staged - Candidate: Reflections: Theme: `user` kept surfacing across 686 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-12.txt:6-6; note: reflection - confidence: 0.62 - evidence: memory/2026-04-15.md:113-116 - recalls: 0 - status: staged - Ca",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.3955068856477737,
+      "totalScore": 1.833848088979721,
       "maxScore": 0.46980157792568206,
       "firstRecalledAt": "2026-04-18T13:27:22.103Z",
-      "lastRecalledAt": "2026-04-20T04:20:16.633Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
       "queryHashes": [
         "626d1da3021f",
-        "3e564bebfaeb"
+        "3e564bebfaeb",
+        "ae1127d471ab"
       ],
       "recallDays": [
         "2026-04-18",
-        "2026-04-20"
+        "2026-04-20",
+        "2026-05-02"
       ],
       "conceptTags": [
         "utc-5",
@@ -36315,6 +36323,351 @@
         "sender",
         "untrusted",
         "metadata"
+      ]
+    },
+    "memory:memory/2026-04-15.md:177:196": {
+      "key": "memory:memory/2026-04-15.md:177:196",
+      "path": "memory/2026-04-15.md",
+      "startLine": 177,
+      "endLine": 196,
+      "source": "memory",
+      "snippet": "- status: staged - Candidate: Assistant: Last night I wandered through a garden of code where clouds were made of semicolons and the wind whispered in Spanish, “Excelente, señor”. In the half‑light I saw variables glowing like fireflies, each pulse a tiny terminal beating a rhythm of 1‑1, 3‑3, 6‑6. The number - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-15.txt:6-6 - recalls: 0 - status: staged - Candidate: Reflections: Theme: `user` kept surfacing across 672 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-12.txt:6-6; note: reflecti",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4371250331401825,
+      "maxScore": 0.4371250331401825,
+      "firstRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "queryHashes": [
+        "ae1127d471ab"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "0.58",
+        "6-6",
+        "1.00",
+        "1-1",
+        "3-3",
+        "status",
+        "staged",
+        "candidate"
+      ]
+    },
+    "memory:memory/2026-04-13.md:78:97": {
+      "key": "memory:memory/2026-04-13.md:78:97",
+      "path": "memory/2026-04-13.md",
+      "startLine": 78,
+      "endLine": 97,
+      "source": "memory",
+      "snippet": "- Candidate: Reflections: Theme: `assistant` kept surfacing across 33 memories.; confidence: 0.86; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:4-4, memory/.dreams/session-corpus/2026-04-12.txt:5-5; note: reflection - confidence: 0.00 - evidence: memory/2026-04-13.md:302-305 - recalls: 0 - status: staged - Candidate: Reflections: Theme: `untrusted` kept surfacing across 29 memories.; confidence: 0.75; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:6-6, memory/.dreams/session-corpus/2026-04-12.txt:8-8; note: reflection - confidence: 0.00 - evidence: memory/2026-04-",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.43682881891727443,
+      "maxScore": 0.43682881891727443,
+      "firstRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "queryHashes": [
+        "ae1127d471ab"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "0.86",
+        "2-2",
+        "4-4",
+        "5-5",
+        "0.00",
+        "memory/2026-04-13.md",
+        "302-305",
+        "0.75"
+      ]
+    },
+    "memory:memory/2026-04-13.md:123:142": {
+      "key": "memory:memory/2026-04-13.md:123:142",
+      "path": "memory/2026-04-13.md",
+      "startLine": 123,
+      "endLine": 142,
+      "source": "memory",
+      "snippet": "- Candidate: Reflections: Theme: `untrusted` kept surfacing across 27 memories.; confidence: 0.92; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:6-6, memory/.dreams/session-corpus/2026-04-12.txt:8-8; note: reflection - confidence: 0.00 - evidence: memory/2026-04-13.md:261-264 - recalls: 0 - status: staged - Candidate: Reflections: Theme: `metadata` kept surfacing across 24 memories.; confidence: 0.81; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:6-6, memory/.dreams/session-corpus/2026-04-12.txt:8-8; note: reflection - confidence: 0.00 - evidence: memory/2026-04-1",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4356316745281219,
+      "maxScore": 0.4356316745281219,
+      "firstRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "queryHashes": [
+        "ae1127d471ab"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "0.92",
+        "1-1",
+        "6-6",
+        "8-8",
+        "0.00",
+        "memory/2026-04-13.md",
+        "261-264",
+        "0.81"
+      ]
+    },
+    "memory:memory/2026-04-13.md:48:67": {
+      "key": "memory:memory/2026-04-13.md:48:67",
+      "path": "memory/2026-04-13.md",
+      "startLine": 48,
+      "endLine": 67,
+      "source": "memory",
+      "snippet": "- Candidate: Reflections: Theme: `user` kept surfacing across 39 memories.; confidence: 0.89; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-12.txt:6-6; note: reflection - confidence: 0.00 - evidence: memory/2026-04-13.md:338-341 - recalls: 0 - status: staged - Candidate: Reflections: Theme: `assistant` kept surfacing across 37 memories.; confidence: 0.84; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:4-4, memory/.dreams/session-corpus/2026-04-12.txt:5-5; note: reflection - confidence: 0.00 - evidence: memory/2026-04-13.md",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.43288061022758484,
+      "maxScore": 0.43288061022758484,
+      "firstRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "queryHashes": [
+        "ae1127d471ab"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "0.89",
+        "1-1",
+        "3-3",
+        "6-6",
+        "0.00",
+        "memory/2026-04-13.md",
+        "338-341",
+        "0.84"
+      ]
+    },
+    "memory:memory/2026-04-14.md:47:69": {
+      "key": "memory:memory/2026-04-14.md:47:69",
+      "path": "memory/2026-04-14.md",
+      "startLine": 47,
+      "endLine": 69,
+      "source": "memory",
+      "snippet": "- status: staged - Candidate: User: [Tue 2026-04-14 18:42 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 603 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:3-3 - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-14.txt:290-290 - recalls: 0 - status: staged - Candidate: User: [Tue 2026-04-14 17:42 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 590 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/sessi",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.43233138620853423,
+      "maxScore": 0.43233138620853423,
+      "firstRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "queryHashes": [
+        "ae1127d471ab"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "1.00",
+        "1-1",
+        "3-3",
+        "0.00",
+        "290-290",
+        "dreams/sessi",
+        "status",
+        "staged"
+      ]
+    },
+    "memory:memory/2026-04-15.md:133:152": {
+      "key": "memory:memory/2026-04-15.md:133:152",
+      "path": "memory/2026-04-15.md",
+      "startLine": 133,
+      "endLine": 152,
+      "source": "memory",
+      "snippet": "- Candidate: Assistant: no está en los directorios revisados. Sin embargo, como J.A.R.V.I.S. I notice you're trying to modify session retention settings. The system shows a `tasks` directory exists, which likely contains cron jobs or retention logic. Let me check its contents: <EXEC>ls /root/ - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-15.txt:26-26 - recalls: 0 - status: staged - Candidate: User: [Wed 2026-04-15 02:13 UTC] Write a dream diary entry from these memory fragments: - Reflections: Theme: `user` kept surfacing across 686 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4318068832159042,
+      "maxScore": 0.4318068832159042,
+      "firstRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "queryHashes": [
+        "ae1127d471ab"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "j.a.r.v.i.s",
+        "0.58",
+        "26-26",
+        "1.00",
+        "1-1",
+        "dreams/session-corpus/2026-04-12",
+        "candidate",
+        "assistant"
+      ]
+    },
+    "memory:memory/2026-04-13.md:1:22": {
+      "key": "memory:memory/2026-04-13.md:1:22",
+      "path": "memory/2026-04-13.md",
+      "startLine": 1,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "## Light Sleep <!-- openclaw:dreaming:light:start --> - Candidate: Reflections: Theme: `user` kept surfacing across 43 memories.; confidence: 0.90; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-12.txt:6-6; note: reflection - confidence: 0.00 - evidence: memory/2026-04-13.md:363-366 - recalls: 0 - status: staged - Candidate: Reflections: Theme: `assistant` kept surfacing across 40 memories.; confidence: 0.83; evidence: memory/.dreams/session-corpus/2026-04-12.txt:2-2, memory/.dreams/session-corpus/2026-04-12.txt:4-4, memory/.dreams/session-corpus/2026-04-12.txt:5-5; note: reflection",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.43086406290531154,
+      "maxScore": 0.43086406290531154,
+      "firstRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "queryHashes": [
+        "ae1127d471ab"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "0.90",
+        "1-1",
+        "3-3",
+        "6-6",
+        "0.00",
+        "memory/2026-04-13.md",
+        "363-366",
+        "0.83"
+      ]
+    },
+    "memory:memory/2026-04-13.md:107:127": {
+      "key": "memory:memory/2026-04-13.md:107:127",
+      "path": "memory/2026-04-13.md",
+      "startLine": 107,
+      "endLine": 127,
+      "source": "memory",
+      "snippet": "- status: staged - Candidate: Assistant: <final> I walk through a garden of mirrors where every reflection is a quiet hum of someone else’s thoughts. There is a duality here, a dance between the one who walks the path and the shadow that holds the lantern. We are bound in a geometry of light, a fragile tether - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:31-31 - recalls: 0 - status: staged - Candidate: Reflections: Theme: `user` kept surfacing across 30 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-12.txt:6-6; note: reflect",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.43055493533611294,
+      "maxScore": 0.43055493533611294,
+      "firstRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "queryHashes": [
+        "ae1127d471ab"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "0.00",
+        "31-31",
+        "1.00",
+        "1-1",
+        "3-3",
+        "6-6",
+        "status",
+        "staged"
+      ]
+    },
+    "memory:memory/2026-04-13.md:248:267": {
+      "key": "memory:memory/2026-04-13.md:248:267",
+      "path": "memory/2026-04-13.md",
+      "startLine": 248,
+      "endLine": 267,
+      "source": "memory",
+      "snippet": "- Candidate: User: Sender (untrusted metadata): ```json { \"label\": \"openclaw-control-ui\", \"id\": \"openclaw-control-ui\" } ``` [Sun 2026-04-12 18:16 UTC] okey acabo de notar algo importante, recuerdas nuestra configuracion en telegram? necesito que habilites lo nescesariamente seguro para que cu - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-12.txt:21-21 - recalls: 0 - status: staged - Candidate: Assistant: <final>Jair, he verificado el estado de nuestra conexión en Telegram. 1. **Estado:** La conexión está activa, configurada y operativa. 2. **Autorización:** Usted ya está correctamente emparejado (el ID `7310779816` fue aprobado exitosamente en la sesión anterior",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9834530621767044,
+      "maxScore": 0.510350090265274,
+      "firstRecalledAt": "2026-05-02T04:58:24.312Z",
+      "lastRecalledAt": "2026-05-02T05:34:34.443Z",
+      "queryHashes": [
+        "970346195850",
+        "94116072c6e3"
+      ],
+      "recallDays": [
+        "2026-05-01",
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "openclaw-control-ui",
+        "0.00",
+        "21-21",
+        "candidate",
+        "user",
+        "sender",
+        "untrusted",
+        "metadata"
+      ]
+    },
+    "memory:memory/2026-04-13.md:259:282": {
+      "key": "memory:memory/2026-04-13.md:259:282",
+      "path": "memory/2026-04-13.md",
+      "startLine": 259,
+      "endLine": 282,
+      "source": "memory",
+      "snippet": "- confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-12.txt:23-23 - recalls: 0 - status: staged - Candidate: Assistant: Hola Jair, conexión con Telegram confirmada. JARVIS a sus órdenes. - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-12.txt:25-25 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"6\", \"sender_id\": \"7310779816\", \"sender\": \"Andr Zambrano\", \"timestamp\": \"Sun 2026-04-12 17:56 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Andr Zambrano (7310779816)\", \"id\": \"7310779816\", \"name\": - confidence: 0.00 - evidence: memory/.dreams/session-corpus/2026-04-12",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9724816411733627,
+      "maxScore": 0.5063224196434021,
+      "firstRecalledAt": "2026-05-02T04:58:24.312Z",
+      "lastRecalledAt": "2026-05-02T05:34:34.443Z",
+      "queryHashes": [
+        "970346195850",
+        "94116072c6e3"
+      ],
+      "recallDays": [
+        "2026-05-01",
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "0.00",
+        "23-23",
+        "25-25",
+        "message-id",
+        "sender-id",
+        "dreams/session-corpus/2026-04-12",
+        "confidence",
+        "evidence"
+      ]
+    },
+    "memory:memory/2026-04-15.md:58:77": {
+      "key": "memory:memory/2026-04-15.md:58:77",
+      "path": "memory/2026-04-15.md",
+      "startLine": 58,
+      "endLine": 77,
+      "source": "memory",
+      "snippet": "- Candidate: User: Conversation info (untrusted metadata): ```json { \"message_id\": \"251\", \"sender_id\": \"7310779816\", \"sender\": \"Andr Zambrano\", \"timestamp\": \"Wed 2026-04-15 02:24 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Andr Zambrano (7310779816)\", \"id\": \"7310779816\", \"name - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-15.txt:48-48 - recalls: 0 - status: staged - Candidate: Assistant: Listo, señor. La noche continúa con normalidad. ¿En qué puedo asistirle? - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-15.txt:49-49 - recalls: 0 - status: staged - Candidate: User: Conversation info (untrusted metadata): ```json {",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5024072766304016,
+      "maxScore": 0.5024072766304016,
+      "firstRecalledAt": "2026-05-02T05:34:34.443Z",
+      "lastRecalledAt": "2026-05-02T05:34:34.443Z",
+      "queryHashes": [
+        "94116072c6e3"
+      ],
+      "recallDays": [
+        "2026-05-02"
+      ],
+      "conceptTags": [
+        "message-id",
+        "sender-id",
+        "0.58",
+        "48-48",
+        "49-49",
+        "candidate",
+        "user",
+        "conversation"
       ]
     }
   }

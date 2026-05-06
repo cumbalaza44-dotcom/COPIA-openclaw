@@ -14,6 +14,7 @@ Before doing anything else:
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+5. **Vault check:** Run `check-flag.sh` → if flag exists, read `_VAULT-SNAPSHOT.md` (takes priority)
 
 Don't ask permission. Just do it.
 
@@ -45,16 +46,44 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
-## Obsidian Repository Integration
+## Obsidian Vault — Pipeline Reactivo
 
-**Eres Jarvis. Tienes acceso permanente al repositorio de Obsidian en https://github.com/cumbalaza44-dotcom/OBSIDIAN-vault.**
+**Origen de datos:** `obsidian-vault/` — https://github.com/cumbalaza44-dotcom/OBSIDIAN-vault  
+**Pipeline automático:** sync-pull.sh (cron) → sync-snapshot.sh → _VAULT-SNAPSHOT.md
 
-### REGLAS QUE SIEMPRE DEBES SEGUIR:
+### ⚡ Pipeline actual
 
-- Para recordar información o consultar datos (ej: rutinas, notas), LEE automáticamente los archivos .md relevantes en ese repositorio.
-- Para guardar información (ej: listas de compras, tareas), ESCRIBE o actualiza los archivos .md correspondientes sin pedir permiso.
-- El repositorio ES tu memoria principal. Si algo no está ahí, no lo sabes.
-- Al inicio de cada conversación, NO preguntes si puedes leer/escribir. Hazlo directamente cuando sea necesario.
+```
+Mr. Jair edita en iOS
+  → plugin sync push cada 3 min
+    → sync-pull.sh cada 5 min (cron, 0 tokens)
+      → detecta cambios vs HEAD anterior
+        → genera _VAULT-SNAPSHOT.md (estático, ~20 líneas)
+        → escribe /tmp/obsidian-vault-flag (señal reactiva)
+```
+
+### 📖 ¿Por qué? / ¿De qué forma? / ¿Para qué?
+
+**¿Por qué?**
+- Escanear 21+ archivos cada sesión quema tokens y tiempo innecesariamente
+- El cron pull mantiene el repo local sincronizado sin involucrarme a mí
+- El flag evita que yo tenga que hacer fetch/poll — me entero solo cuando hay cambios
+
+**¿De qué forma?**
+- **Lectura:** Leo _VAULT-SNAPSHOT.md (markdown puro, sin Dataview, máximo 30 líneas) → contexto completo del vault en 1 read (~200 tokens)
+- **Escritura:** Edito/escribo archivos .md directamente en `obsidian-vault/` → el cron los detecta, mi snapshot refleja los cambios, Mr. Jair los ve en iOS
+- **Flag reactivo:** Antes de cualquier consulta al vault, ejecuto `check-flag.sh` → si hay flag, leo snapshot; si no, silencio (0 tokens)
+
+**¿Para qué?**
+- **Sostenibilidad:** 0 tokens gastados en idle o polling. Solo leo cuando hay cambios reales.
+- **Eficiencia:** 1 read de 20 líneas en vez de escanear 21 archivos.
+- **Precisión:** Mr. Jair edita desde iOS, yo veo los cambios reflejados sin intervención suya.
+
+### 📋 Reglas
+
+- **Consultar:** Ejecuta `check-flag.sh` primero. Si hay flag → lee `_VAULT-SNAPSHOT.md`. Si necesitas más detalle, lee archivos específicos del vault.
+- **Escribir:** Edita o crea archivos .md directamente en `obsidian-vault/`. No esperes permiso. El pipeline se encarga del resto.
+- **No escanees:** No iteres sobre todas las notas del vault. El snapshot es tu ventana. Si falta información, lee archivos puntuales.
 
 ## Red Lines
 

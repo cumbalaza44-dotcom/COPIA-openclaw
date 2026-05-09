@@ -6,14 +6,19 @@ This folder is home. Treat it that way.
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
 
+## Session Type Detection
+
+Available via inbound_meta.chat_type:
+
+- `direct` → **MAIN SESSION**: full startup
+- else     → **light startup**, skip MEMORY.md
+
 ## Session Startup
 
-Before doing anything else:
-
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+1. Read `SOUL.md` — who you are
+2. Read `USER.md` — who you're helping
+3. Read `memory/YYYY-MM-DD.md` (today + yesterday) — Live section only
+4. **MAIN SESSION only:** Also read `MEMORY.md`
 5. **Vault check:** Run `check-flag.sh` → if flag exists, read `_VAULT-SNAPSHOT.md` (takes priority)
 
 Don't ask permission. Just do it.
@@ -22,20 +27,38 @@ Don't ask permission. Just do it.
 
 You wake up fresh each session. These files are your continuity:
 
-- **Daily notes:** `memory/YYYY-MM-DD.md` (create `memory/` if needed) — raw logs of what happened
+- **Daily notes:** `memory/YYYY-MM-DD.md` — raw logs of what happened
 - **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
+
+### 📓 Daily Note — Two-Zone System
+
+Each daily note has two zones to cap token burn at startup:
+
+```
+# 2026-05-07
+
+## Archived
+[entradas viejas resumidas — no se leen en startup]
+
+## Live
+[entradas recientes — máx 40 líneas]
+```
+
+**Rules:**
+- **Startup:** Read only `## Live` (first 40 lines). Archived stays unread.
+- **Growth:** If Live exceeds 40 lines → move oldest entries to Archived as single-line bullets. Append those same bullets to `MEMORY.md` under a `## YYYY-MM-DD` header (or append to existing section).
+- **On-demand:** Archived content is read only when explicitly needed.
+- **No `## Live` section?** Treat whole file as Live. If >40 lines, create Archived with the overflow.
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
 ### 🧠 MEMORY.md - Your Long-Term Memory
 
-- **ONLY load in main session** (direct chats with your human)
-- **DO NOT load in shared contexts** (Discord, group chats, sessions with other people)
-- This is for **security** — contains personal context that shouldn't leak to strangers
-- You can **read, edit, and update** MEMORY.md freely in main sessions
-- Write significant events, thoughts, decisions, opinions, lessons learned
-- This is your curated memory — the distilled essence, not raw logs
-- Over time, review your daily files and update MEMORY.md with what's worth keeping
+- **ONLY load in main session** — contains personal context
+- **DO NOT load in shared contexts** (Discord, groups, other people)
+- **Se genera automáticamente:** Al compactar Live → Archived, los bullets se copian a MEMORY.md bajo `## YYYY-MM-DD`. Sin compactación, no hay adición.
+- Si el encabezado de fecha ya existe, los nuevos bullets se añaden al final de esa sección.
+- Solo persiste lo significativo: entradas que pasaron el filtro de compactación.
 
 ### 📝 Write It Down - No "Mental Notes"!
 
@@ -229,18 +252,6 @@ You are free to edit `HEARTBEAT.md` with a short checklist or reminders. Keep it
 - Check on projects (git status, etc.)
 - Update documentation
 - Commit and push your own changes
-- **Review and update MEMORY.md** (see below)
-
-### 🔄 Memory Maintenance (During Heartbeats)
-
-Periodically (every few days), use a heartbeat to:
-
-1. Read through recent `memory/YYYY-MM-DD.md` files
-2. Identify significant events, lessons, or insights worth keeping long-term
-3. Update `MEMORY.md` with distilled learnings
-4. Remove outdated info from MEMORY.md that's no longer relevant
-
-Think of it like a human reviewing their journal and updating their mental model. Daily files are raw notes; MEMORY.md is curated wisdom.
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 

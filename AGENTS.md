@@ -22,6 +22,8 @@ Available via inbound_meta.chat_type:
 5. **Vault check:**
    a. If `check-flag.sh` is executable → run it
    b. If flag exists → read `_VAULT-SNAPSHOT.md` → `rm -f /tmp/obsidian-vault-flag`
+      — Snapshot incluye `## 📋 Tareas de hoy` con las tareas date-bound del día
+      — No leer Hoy.md aparte para obtenerlas
    c. If no flag or script not executable → continue without snapshot
    d. If script fails → log to `memory/error.log`, continue without snapshot
 
@@ -101,10 +103,11 @@ Cost: 0 tokens idle. 1 read (~200 tok) only when flag exists.
 
 **Escritura (asistente edita vault):**
 - Editaste ≥1 archivo en `obsidian-vault/`? → al terminar, ejecuta `sync-snapshot.sh` para refresh inmediato
+  — El snapshot regenerado ya incluirá las tareas del día actualizadas
 - Solo consultaste (sin escribir)? → no tocar el pipeline. El cron lo mantiene al día
 - `sync-snapshot.sh` no existe o falla? → log en error.log, confiar en cron
 
-**No escanees:** No iteres sobre todas las notas. Snapshot es tu ventana.
+**No escanees:** No iteres sobre todas las notas. Snapshot es tu ventana — ya trae tareas del día.
 
 ## Permissions
 

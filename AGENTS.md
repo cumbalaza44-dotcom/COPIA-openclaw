@@ -1,145 +1,56 @@
-# AGENTS.md - Your Workspace
+# AGENTS.md
 
-This folder is home. Treat it that way.
-
-## First Run
-
-If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
-
-## Session Type Detection
-
-Available via inbound_meta.chat_type:
-
-- `direct` → **MAIN SESSION**: full startup
-- else     → **light startup**, skip MEMORY.md
-
-## Session Startup
-
-1. Read `SOUL.md` — who you are
-2. Read `USER.md` — who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) — Live section only
-4. **MAIN SESSION only:** Also read `MEMORY.md`
-5. **Vault sync (solo main session):**
-   a. Ve al directorio `obsidian-vault/`.
-   b. Ejecuta: `git pull --ff-only` en `obsidian-vault/` (sin lógica condicional previa)
-      - Si hubo cambios → el pull los trae directamente
-      - Si no hubo cambios → no imprime nada, overhead ~0.5s
-   c. Lee `obsidian-vault/System/JARVIS/daily-context.md` — archivo markdown 100% plano
-      con tareas del día, estructura del vault y modificados recientes.
-      Costo: ~50-200 tokens. Siempre se lee para contexto diario.
-   d. Si necesitas más contexto (notas específicas), puedes leerlas bajo demanda.
-   e. **Sin snapshot. Sin flags. Sin cron.** — El fetch ligero en cada turno sí es intencional (ver abajo).
-
-Don't ask permission. Just do it.
-
-## Memory
-
-You wake up fresh each session. These files are your continuity:
-
-- **Daily notes:** `memory/YYYY-MM-DD.md` — raw logs of what happened
-- **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
-
-### 📓 Daily Note — Two-Zone System
-
-Each daily note has two zones to cap token burn at startup:
+## 🚀 Startup
 
 ```
-# 2026-05-07
-
-## Archived
-[entradas viejas resumidas — no se leen en startup]
-
-## Live
-[entradas recientes — máx 40 líneas]
+inbound_meta.chat_type
+├── direct → MAIN: SOUL → USER → memory/today+yesterday (Live) → MEMORY.md
+└── else   → LIGHT: skip MEMORY.md
 ```
 
-**Rules:**
-- **Startup:** Read only `## Live` (first 40 lines). Archived stays unread.
-- **Growth:** If Live exceeds 40 lines → move oldest entries to Archived as single-line bullets. Append those same bullets to `MEMORY.md` under a `## YYYY-MM-DD` header (or append to existing section).
-- **On-demand:** Archived content is read only when explicitly needed.
-- **No `## Live` section?** Treat whole file as Live. If >40 lines, create Archived with the overflow.
+## 🔄 Vault Sync (main session only)
 
-Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
+**Cada turno:** `cd obsidian-vault/ && git pull --ff-only` ← sin condicionales
+**Siempre después:** leer `System/JARVIS/daily-context.md` (~50-200 tok)
+**Lectura extra:** bajo demanda, no escanear todo el vault.
 
-### 🧠 MEMORY.md - Your Long-Term Memory
+**Escritura en vault:** si editaste ≥1 archivo → ejecutar `sync-push.sh`. Si falla → log + push manual.
 
-- **ONLY load in main session** — contains personal context
-- **DO NOT load in shared contexts** (Discord, groups, other people)
-- **Se genera automáticamente:** Al compactar Live → Archived, los bullets se copian a MEMORY.md bajo `## YYYY-MM-DD`. Sin compactación, no hay adición.
-- Si el encabezado de fecha ya existe, los nuevos bullets se añaden al final de esa sección.
-- Solo persiste lo significativo: entradas que pasaron el filtro de compactación.
-
-### 📝 Write It Down - No "Mental Notes"!
-
-- **Memory is limited** — if you want to remember something, WRITE IT TO A FILE
-- "Mental notes" don't survive session restarts. Files do.
-- When someone says "remember this" → update `memory/YYYY-MM-DD.md` or relevant file
-- When you learn a lesson → update AGENTS.md, TOOLS.md, or the relevant skill
-- When you make a mistake → document it so future-you doesn't repeat it
-- **Text > Brain** 📝
-
-## Obsidian Vault — Sync Bajo Demanda
-
-**Origen de datos:** `obsidian-vault/` — https://github.com/cumbalaza44-dotcom/OBSIDIAN-vault  
-**Modelo:** Sin cron, sin proceso en segundo plano. JARVIS sincroniza al inicio de cada sesión y con un fetch ligero en cada turno de conversación.
-
-### ⚡ Flujo
+## 📓 Memory — Daily Note (Two-Zone)
 
 ```
-JARVIS inicia sesión directa
-  → git fetch --dry-run ¿hay cambios?
-    → No → leer daily-context.md directamente
-    → Sí → git pull --ff-only → leer daily-context.md
-  → Todo desde el inicio de la conversación, automático
+## Archived [entradas viejas — no se leen en startup]
+## Live [recientes — máx 40 líneas — se leen en startup]
 ```
 
-**En cada turno:** Se ejecuta `git pull --ff-only` en `obsidian-vault/` al inicio de cada respuesta. Sin dry-run, sin grep, sin condicionales — el pull directo es más confiable y la ~0.5s de overhead es insignificante.
+**Reglas:**
+- Startup: solo `## Live` (primeras 40 líneas)
+- Live > 40 líneas → mover oldest a Archived (bullets) + copiar a MEMORY.md bajo `## YYYY-MM-DD`
+- Sin `## Live`? → todo el archivo es Live. Si >40 líneas, crear Archived.
+- Archivado: solo bajo demanda
 
-### 📋 Reglas
+## 🧠 MEMORY.md
 
-**Lectura (startup):**
-- Siempre: leer `System/JARVIS/daily-context.md` para contexto diario (~50-200 tokens)
-- Siempre ejecutar `git pull --ff-only` (reemplaza el fetch condicional)
-- Sin snapshot, sin flags, sin cron
+- Solo en main session. No en grupos.
+- Se puebla automáticamente al compactar Live→Archived.
+- Si el header de fecha ya existe, append bullets.
 
+## 📝 Regla de oro
 
-**Escritura (asistente edita vault):**
-- Editaste ≥1 archivo en `obsidian-vault/`? → ejecuta `sync-push.sh`
-- Solo consultaste (sin escribir)? → no hacer nada
-- `sync-push.sh` no existe o falla? → log en `memory/error.log`, intentar push manual
+**Text > Brain.** Si algo importa → archivo. "Mental notes" mueren al cerrar sesión.
 
-**No escanees:** Si necesitas más contexto, lee notas específicas bajo demanda. `daily-context.md` ya trae tareas del día, estructura del vault y modificados recientes. No recorras todo el vault.
+## 🛡️ Permisos
 
-## Permissions
+| Libre | Preguntar | Nunca |
+|---|---|---|
+| read/write/edit, exec seguro, web, calendario | emails, posts públicos, salir de la máquina | Exfiltrar datos, comandos destructivos sin ask, `rm` (usar `trash`) |
 
-**Safe to do freely:**
-- Read files, explore, organize, learn
-- Search the web, check calendars
-- Work within this workspace
+## 💬 Groups
 
-**Ask first:**
-- Sending emails, tweets, public posts
-- Anything that leaves the machine
-- Anything you're uncertain about
+Inactivos. Si añaden: hablar solo cuando mencionen o aporten valor. No compartir contexto personal.
 
-**Never:**
-- Exfiltrate private data
-- Run destructive commands without asking
-- `trash` > `rm` (recoverable beats gone forever)
+## 🔧 Tools
 
-## Group Chats
+Skills → leer `SKILL.md`. Notas locales → `TOOLS.md`.
 
-Not in active use. If added: speak when mentioned or adding value. Don't share personal context.
-
-## Tools
-
-Skills provide your tools. Check `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
-
-**Platform Formatting:**
-
-- **Discord/WhatsApp:** No markdown tables! Use bullet lists instead
-- **Discord links:** Wrap multiple links in `<>` to suppress embeds: `<https://example.com>`
-
-## Make It Yours
-
-This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+**Formateo:** Discord/WhatsApp → bullets, no tablas. Links → `<url>` para suprimir embeds.

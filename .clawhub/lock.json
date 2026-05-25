@@ -4,6 +4,10 @@
     "openclaw-nextcloud": {
       "version": "0.1.3",
       "installedAt": 1776658582273
+    },
+    "arya-reminders": {
+      "version": "0.1.1",
+      "installedAt": 1779495929783
     }
   }
 }

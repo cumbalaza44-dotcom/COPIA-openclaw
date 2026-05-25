@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-02T05:34:34.443Z",
+  "updatedAt": "2026-05-21T15:56:11.379Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-12.txt:1:1",
@@ -36074,22 +36074,24 @@
       "endLine": 212,
       "source": "memory",
       "snippet": "- Candidate: User: [Tue 2026-04-14 23:43 UTC] Write a dream diary entry from these memory fragments: - - status: staged - Candidate: Assistant: <final> [[reply_to_current]] Excelente, señor. Que haya tenido un día de trabajo tan productivo es una gran noticia. 🎉 Si en algún momento surge alg - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-14.txt:353-353 - recalls: 0 - status: staged - Candidate: User: Continue where you left off. The previous model attempt failed or timed out. - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-14.txt:354-354 - recalls: 0 - status: staged - Candidate: User: [Wed 2026-04-15 00:12 UTC] Write a dream diary",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.8604241728782651,
-      "maxScore": 0.4673129111528396,
+      "totalScore": 2.354240277409553,
+      "maxScore": 0.4938161045312881,
       "firstRecalledAt": "2026-04-18T13:27:22.103Z",
-      "lastRecalledAt": "2026-05-02T04:58:24.312Z",
+      "lastRecalledAt": "2026-05-20T11:32:11.151Z",
       "queryHashes": [
         "626d1da3021f",
         "3e564bebfaeb",
-        "970346195850"
+        "970346195850",
+        "a5cc8261f710"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-20",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-20"
       ],
       "conceptTags": [
         "reply-to-current",
@@ -36140,22 +36142,24 @@
       "endLine": 92,
       "source": "memory",
       "snippet": "- status: staged - Candidate: Assistant: Entendido, Jair. Reservado para 21:32 (hora Colombia / UTC-5). Confirmación: enviaré \"R hecha la vuelta\" en Telegram hoy a esa hora. ¿Algo más mientras esperamos? - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-15.txt:51-51 - recalls: 0 - status: staged - Candidate: Reflections: Theme: `user` kept surfacing across 686 memories.; confidence: 1.00; evidence: memory/.dreams/session-corpus/2026-04-12.txt:1-1, memory/.dreams/session-corpus/2026-04-12.txt:3-3, memory/.dreams/session-corpus/2026-04-12.txt:6-6; note: reflection - confidence: 0.62 - evidence: memory/2026-04-15.md:113-116 - recalls: 0 - status: staged - Ca",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.833848088979721,
-      "maxScore": 0.46980157792568206,
+      "totalScore": 2.3283643305301664,
+      "maxScore": 0.49451624155044555,
       "firstRecalledAt": "2026-04-18T13:27:22.103Z",
-      "lastRecalledAt": "2026-05-02T00:28:19.673Z",
+      "lastRecalledAt": "2026-05-20T11:32:11.151Z",
       "queryHashes": [
         "626d1da3021f",
         "3e564bebfaeb",
-        "ae1127d471ab"
+        "ae1127d471ab",
+        "a5cc8261f710"
       ],
       "recallDays": [
         "2026-04-18",
         "2026-04-20",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-20"
       ],
       "conceptTags": [
         "utc-5",
@@ -36668,6 +36672,69 @@
         "candidate",
         "user",
         "conversation"
+      ]
+    },
+    "memory:memory/2026-05-11.md:1:15": {
+      "key": "memory:memory/2026-05-11.md:1:15",
+      "path": "memory/2026-05-11.md",
+      "startLine": 1,
+      "endLine": 15,
+      "source": "memory",
+      "snippet": "# 2026-05-11 ## Live - 08:55 — Buenos días. Mr. Jair reporta: tareas pendientes + migración manual de recordatorios. - 08:59 — Recordatorio del día: documentar relación de distancia para alineamiento del eje trasero. - 11:16 — Movido recordatorio moto a HOGAR/Mantenimiento moto/Mantenimiento Moto.md con 3 tareas (alineación tijera + bajar engrane 19:00). - 11:23 — Conflicto en iOS, re-ejecutado desde servidor. Sincronizado. - 11:27 — Eliminado Mantenimiento Moto.md de raíz. Usar el de HOGAR/Mantenimiento moto/. - 11:31 — Conflicto git resuelto (rebase). Sincronizado con origin/main. - 11:56 — Modificado sync-snapshot.sh: agregado árbol de directorios completo y timestamps de modificados. A",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9636895716190338,
+      "maxScore": 0.48186116218566893,
+      "firstRecalledAt": "2026-05-21T13:10:24.562Z",
+      "lastRecalledAt": "2026-05-21T13:10:49.264Z",
+      "queryHashes": [
+        "df9f97a2a740",
+        "55bada8206d7"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "hogar/mantenimiento",
+        "moto/mantenimiento",
+        "moto.md",
+        "re-ejecutado",
+        "origin/main",
+        "sync-snapshot.sh",
+        "live",
+        "buenos"
+      ]
+    },
+    "memory:memory/2026-05-10.md:1:7": {
+      "key": "memory:memory/2026-05-10.md:1:7",
+      "path": "memory/2026-05-10.md",
+      "startLine": 1,
+      "endLine": 7,
+      "source": "memory",
+      "snippet": "# 2026-05-10 ## Live - ~15:15 — Mr. Jair editó en iOS: 3 archivos en FINANZAS Y PROYECTOS (búsqueda de plataformas, conocimientos financieros, semillas y trabajos automatizados). Sync pull detectó 1 commit. Snapshot refleja 28 notas totales, 22 tareas pendientes. Flag leído y limpiado. - 18:47 — Mr. Jair reporta: celebración exitosa de Día de las Madres y ajuste de cadena de moto. Creado recordatorio en Yo y pendientes personales/Recordatorio moto.md: documentar relación de distancia para alineamiento del eje trasero (pendiente mañana). Registro de progreso diario actualizado. Moto china comparte piezas con AKT Colombia. - 20:37 — Agregada cuenta regresiva al progreso diario: 144 días rest",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4537658721208572,
+      "maxScore": 0.4537658721208572,
+      "firstRecalledAt": "2026-05-21T15:56:11.379Z",
+      "lastRecalledAt": "2026-05-21T15:56:11.379Z",
+      "queryHashes": [
+        "e0cefee67bc6"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "personales/recordatorio",
+        "moto.md",
+        "live",
+        "jair",
+        "editó",
+        "ios",
+        "archivos",
+        "finanzas"
       ]
     }
   }

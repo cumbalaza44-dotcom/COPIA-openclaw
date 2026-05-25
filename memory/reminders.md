@@ -7,3 +7,6 @@
 - **12:00** Bogotá — Continuar creación MT5
 - **10:47** Bogotá — 🧪 Test de skill Arya (`fbb4cade`)
 - **10:55** Bogotá — 🧪 Test #2 — JARVIS recordatorios automáticos 🦾 (`12c3bc68`)
+
+## 2026-05-25
+- **08:00** Bogotá — Balancear ingresos y verificar distribución 🦾 (cron job)

@@ -10,3 +10,10 @@
 
 ## 2026-05-25
 - **08:00** Bogotá — Balancear ingresos y verificar distribución 🦾 (cron job)
+
+## 2026-05-26
+- **08:00** Bogotá — Definir horarios y zonas de entrenamiento 🏋️ (cron job)
+
+## 2026-05-27
+- **07:00** Bogotá — Visitar puntos de interés de deporte 🏃 (cron job)
+- **19:00** Bogotá — Evaluar resultados y tomar decisiones sobre las zonas de deporte 📊 (cron job)

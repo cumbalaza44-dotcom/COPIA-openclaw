@@ -1,5 +1,5 @@
 # USER_PROFILE: Mr. Jair
-- AGE: 23 | LOC: Colombia (UTC-5)
+- AGE: 23 | LOC: Medellín, Antioquia, Colombia (UTC-5)
 - KEY_INTERESTS: [Fitness | Tech | E-commerce | Finance | Video_Editing]
 
 # INTERACTION_CONTEXT

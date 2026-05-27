@@ -13,7 +13,8 @@
 
 ## 2026-05-26
 - **08:00** Bogotá — Definir horarios y zonas de entrenamiento 🏋️ (cron job)
+- **19:00** Bogotá — Agregar nuevo modelo al sistema OpenClaw 🦾
 
 ## 2026-05-27
 - **07:00** Bogotá — Visitar puntos de interés de deporte 🏃 (cron job)
-- **19:00** Bogotá — Evaluar resultados y tomar decisiones sobre las zonas de deporte 📊 (cron job)
+- **08:01** Bogotá — Definir volumen máximo del sonido 🦾

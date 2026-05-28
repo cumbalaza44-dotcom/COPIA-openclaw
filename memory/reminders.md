@@ -18,3 +18,5 @@
 ## 2026-05-27
 - **07:00** Bogotá — Visitar puntos de interés de deporte 🏃 (cron job)
 - **08:01** Bogotá — Definir volumen máximo del sonido 🦾
+| 2026-05-27 15:36 | mañana 7:50 AM | alistar fibra óptica para fusionar: preparar | ✅ |
+| 2026-05-27 21:59 | mañana 7:00 AM | hacer transferencias a bancos y pago de servicios | ✅ |

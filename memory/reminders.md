@@ -25,3 +25,4 @@
 - **07:50** Bogotá — ✅ Alistar fibra óptica para fusionar (completado)
 - **07:00** Bogotá — ✅ Transferencias a bancos y pago de servicios (completado)
 - **18:00** Bogotá — Evaluar resultados zonas deporte 📊 (cron job)
+- [2026-05-30 08:00] Recordatorio: Mantenimiento moto: desarmar, corregir y hacer mantenimiento general al sistema de admisión

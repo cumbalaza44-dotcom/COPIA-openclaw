@@ -46,3 +46,6 @@ cat memory/reminders.md
 
 - No requiere APIs externas.
 - Usa el tool `cron` del Gateway (no hardcodea rutas ni IDs ajenos).
+- **Delivery:** Siempre incluye `channel` + `to` en el payload de entrega para evitar que el sistema resuelva a un target incorrecto (ej. `@heartbeat`).
+- **Chat ID:** Configurar `ARYA_TELEGRAM_CHAT_ID` o usar el default `7310779816`.
+- **sessionTarget:** `isolated` para one-shot (evita ensuciar la sesión principal).

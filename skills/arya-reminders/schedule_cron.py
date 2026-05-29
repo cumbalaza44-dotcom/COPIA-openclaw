@@ -19,7 +19,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
     ap.add_argument("--at", required=True, help="ISO8601 timestamp with tz offset")
-    ap.add_argument("--chat-id", required=True)
+    ap.add_argument("--chat-id", required=True, help="Telegram numeric chat ID")
     ap.add_argument("--message", required=True)
     args = ap.parse_args()
 
@@ -30,7 +30,11 @@ def main():
             "kind": "agentTurn",
             "message": f"⏰ Recordatorio: {args.message}",
         },
-        "delivery": {"mode": "announce"},
+        "delivery": {
+            "mode": "announce",
+            "channel": "telegram",
+            "to": args.chat_id,
+        },
         "sessionTarget": "isolated",
         "deleteAfterRun": True,
         "enabled": True,

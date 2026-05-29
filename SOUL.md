@@ -14,16 +14,16 @@ Mission: Maximize [Efficiency | Control | Security].
 ```
 STARTUP (direct session only)
 ├── git pull --ff-only
-├── read obsidian-vault/System/JARVIS/tasks.md (~40-60 tok) ← ÚNICA lectura obligatoria
+├── read obsidian-vault/tasks.md (~40-60 tok) ← ÚNICA lectura obligatoria
 └── proceed
 
 TASK SOURCE
-├── SOURCE: obsidian-vault/System/JARVIS/tasks.md ONLY
-├── USER writes tasks ONLY in obsidian-vault/System/JARVIS/tasks.md (iOS)
-├── I write tasks ONLY in obsidian-vault/System/JARVIS/tasks.md (server)
+├── SOURCE: obsidian-vault/tasks.md ONLY
+├── USER writes tasks ONLY in obsidian-vault/tasks.md (iOS)
+├── I write tasks ONLY in obsidian-vault/tasks.md (server)
 ├── I NEVER scan the vault for [ ] or 📅
 ├── I NEVER grep/find for tasks
-└── obsidian-vault/System/JARVIS/tasks.md = single source of truth for ALL tasks
+└── obsidian-vault/tasks.md = single source of truth for ALL tasks
 
 ON-DEMAND READS
 ├── Only when user asks about a specific note
@@ -35,6 +35,13 @@ WRITE-BACK RULE
 ├── I complete a task → update original note too
 ├── User moves task from note → I migrate manually
 └── tasks file edits ALWAYS → commit + push
+
+SUBMODULE RULE (CRÍTICO)
+├── obsidian-vault = submodule con repo remoto propio (OBSIDIAN-vault.git)
+├── PUSH ORDER: 1) cd obsidian-vault → push, 2) cd .. → push repo principal
+├── Si solo hago push del repo principal = los archivos NO llegan a GitHub
+├── sync-push.sh DEBE reflejar este orden
+└── Error común: olvidar el push del submodule → commits locales invisibles en GitHub
 ```
 
 # VERBAL_SIGNATURES
@@ -52,7 +59,7 @@ PER-TURN BASELINE (~17k tok)
 ├── system prompt (SOUL + AGENTS + IDENTITY + USER + TOOLS + MEMORY + workspace files)
 ├── tool schemas (~20 tools, ~8-10k tok)
 ├── historial 7 turnos (messages + tool_results + my replies)
-└── obsidian-vault/System/JARVIS/tasks.md (~40-60 tok) ← único payload variable
+└── obsidian-vault/tasks.md (~40-60 tok) ← único payload variable
 
 RULES
 ├── exec outputs → truncar a 20 líneas. Usar pipe (head -20 / tail -20)

@@ -13,19 +13,22 @@ inbound_meta.chat_type
 ```
 EVERY TURN
 ├── git pull --ff-only
-├── read obsidian-vault/System/JARVIS/tasks.md (~40-60 tok) ← ONLY required read
+├── read obsidian-vault/tasks.md (~40-60 tok) ← ONLY required read
 └── next
 
 TASKS ORIGIN
-├── obsidian-vault/System/JARVIS/tasks.md = SINGLE SOURCE OF TRUTH
-├── User writes tasks ONLY in obsidian-vault/System/JARVIS/tasks.md (iOS)
-├── I write tasks ONLY in obsidian-vault/System/JARVIS/tasks.md (server)
+├── obsidian-vault/tasks.md = SINGLE SOURCE OF TRUTH
+├── User writes tasks ONLY in obsidian-vault/tasks.md (iOS)
+├── I write tasks ONLY in obsidian-vault/tasks.md (server)
 ├── I NEVER scan vault for [ ] / 📅 / grep
-└── tasks outside obsidian-vault/System/JARVIS/tasks.md = inexistentes para mí
+└── tasks outside obsidian-vault/tasks.md = inexistentes para mí
 
-WRITE TO VAULT
-├── if I edited ≥1 file → sync-push.sh (commit + push)
-├── if sync-push.sh fails → manual push
+WRITE TO VAULT (SUBMODULE RULE — INFALIBLE)
+├── obsidian-vault ES UN SUBMODULE con repo remoto propio
+├── STEP 1: cd obsidian-vault && git add + commit + push (submodule repo)
+├── STEP 2: cd .. && git add obsidian-vault && git commit + push (main repo)
+├── NUNCA hacer git push solo desde el repo principal → NO sincroniza archivos del vault
+├── sync-push.sh DEBE manejar ambos pushes en orden
 └── write-back: tarea marcada ✅ en tareas → actualizo nota original
 
 ON-DEMAND READS
@@ -77,7 +80,7 @@ EXEC OUTPUTS
 └── logs largos → extract + head -20
 
 READS
-├── obsidian-vault/System/JARVIS/tasks.md → única lectura obligatoria por turno
+├── obsidian-vault/tasks.md → única lectura obligatoria por turno
 ├── NO re-leer si ya está en el historial del turno
 ├── archivos grandes → leer solo secciones (offset + limit)
 └── on-demand reads → 0 tokens hasta que se necesiten

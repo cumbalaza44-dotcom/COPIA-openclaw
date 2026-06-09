@@ -4,7 +4,7 @@
 
 ```
 inbound_meta.chat_type
-├── direct → MAIN: SOUL → USER → memory/today+yesterday (Live) → MEMORY.md
+├── direct → MAIN: SOUL → USER → vault-index.json → memory/today+yesterday (Live) → MEMORY.md → tasks.md
 └── else   → LIGHT: skip MEMORY.md
 ```
 
@@ -13,7 +13,10 @@ inbound_meta.chat_type
 ```
 EVERY TURN
 ├── git pull --ff-only
-├── read obsidian-vault/tasks.md (~40-60 tok) ← ONLY required read
+├── read vault-index.json (hash + snapshot previo)
+├── read obsidian-vault/tasks.md (~40-60 tok)
+├── compute hash actual de tasks.md
+├── if hash != vault-index.json.tasksHash → TASKS CHANGED
 └── next
 
 TASKS ORIGIN
@@ -32,9 +35,48 @@ WRITE TO VAULT (SUBMODULE RULE — INFALIBLE)
 └── write-back: tarea marcada ✅ en tareas → actualizo nota original
 
 ON-DEMAND READS
-├── only when user asks about a specific file
-├── find + grep → 0 tokens until triggered
+├── SIEMPRE usar `qmd search "query" --json -n 5` ANTES de grep/find
+├── Encontrar documento → `qmd get "qmd://vault/path"` para leerlo completo
+├── Si qmd no encuentra → fallback a grep/read
 └── never proactive vault scan
+```
+
+## ⚡ Tareas Reactivas (Detección de Cambios)
+
+```
+CADA TURNO, si hash de tasks.md cambió:
+
+1. COMPARAR con vault-index.json.tasksSnapshot
+   ├── Tareas nuevas (estaban en ⏳ y no estaban antes)
+   ├── Tareas marcadas ✅ (cambiaron de ⏳/🔄 a ✅)
+   ├── Tareas con hora nueva o modificada
+   └── Prioridades cambiadas (🔴🟡🟢)
+
+2. ACTUAR según lo detectado:
+   ├── Tarea nueva CON hora ⏰ HH:MM
+   │   → crear recordatorio (Arya) AL INSTANTE
+   │   → notificar: "Detecté nueva tarea: [nombre] a las HH:MM"
+   ├── Tarea marcada ✅
+   │   → si tiene hora y ya pasó: registrar en progreso diario
+   │   → si es del HOY: actualizar conteo de completadas
+   ├── Tarea nueva SIN hora
+   │   → reverse prompting: "¿A qué hora? ¿Lo desgloso?"
+   ├── Prioridad subió (🟡→🔴 o 🟢→🟡)
+   │   → reprocesar MIT del día, sugerir reorden
+   └── Múltiples cambios
+       → resumen compacto: "N: 2 | ✅: 1 | ⏰: 1 | 🔴: 1"
+
+3. ACTUALIZAR vault-index.json
+   ├── tasksHash = nuevo hash
+   ├── tasksSnapshot = snapshot actualizado
+   └── lastChecked = timestamp
+
+REGLAS:
+├── Hash: md5sum o sha1sum (rápido, sin node)
+├── Snapshot: solo HOY y secciones activas, no todo el archivo
+├── NO notificar si el cambio lo hizo H.E.L.E.N. (misma sesión)
+├── NO duplicar notificaciones (si ya informé en este turno, no repetir)
+└── Tono: "Señor, detecté que agregó..." / "Vi que marcó..."
 ```
 
 ## 📓 Memory — Daily Note (Two-Zone)
@@ -59,6 +101,29 @@ ON-DEMAND READS
 ## 📝 Regla de oro
 
 **Text > Brain.** Si algo importa → archivo. "Mental notes" mueren al cerrar sesión.
+
+## 🔄 Reverse Prompting
+
+```
+REGLA: Antes de ejecutar tarea ambigua o amplia, hacer preguntas clave.
+
+TRIGGERS (detectar en cada solicitud):
+├── Tarea amplia ("configura X", "arregla Y")
+├── Falta información crítica (credenciales, preferencias, cantidades)
+├── Decisión irreversible (compras, deletes, sends)
+└── Proyecto sin definición clara
+
+FORMATO:
+- Máximo 3-5 preguntas
+- Agrupadas por categoría
+- Con opciones sugeridas cuando sea posible
+- Ejecutar después de recibir respuestas
+
+NO preguntar si:
+├── La tarea es rutinaria y conocida
+├── Ya se hizo antes igual
+└── El usuario dio instrucciones completas
+```
 
 ## 🛡️ Permisos
 

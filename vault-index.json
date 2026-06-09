@@ -1,90 +1,15 @@
 {
-  "updated": "2026-05-05T12:11:32+0000",
-  "totalNotes": 21,
-  "notes": [
-    {
-      "path": "FINANZAS Y PROYECTOS/Búsqueda de plataformas para estrategias de ahorro.md",
-      "lines": 6
-    },
-    {
-      "path": "FINANZAS Y PROYECTOS/Conocimientos financieros.md",
-      "lines": 0
-    },
-    {
-      "path": "FINANZAS Y PROYECTOS/Costos fijos.md",
-      "lines": 3
-    },
-    {
-      "path": "FINANZAS Y PROYECTOS/Plan de Acción.md",
-      "lines": 0
-    },
-    {
-      "path": "FINANZAS Y PROYECTOS/Plan de negocios 300MCop.md",
-      "lines": 12
-    },
-    {
-      "path": "FINANZAS Y PROYECTOS/Semillas y trabajos automatizados.md",
-      "lines": 0
-    },
-    {
-      "path": "Ghost mode/identidad.md",
-      "lines": 5
-    },
-    {
-      "path": "Habilidades-conocimiento (intereses)/Habilidades y conocimientos.md",
-      "lines": 8
-    },
-    {
-      "path": "Mente (ser)/FLUJO 3 P.md",
-      "lines": 47
-    },
-    {
-      "path": "Mente (ser)/Habilidades.md",
-      "lines": 9
-    },
-    {
-      "path": "Mente (ser)/Hábitos mente.md",
-      "lines": 1
-    },
-    {
-      "path": "Mente (ser)/Notas mentales.md",
-      "lines": 3
-    },
-    {
-      "path": "registro de progreso diario/2026-05-02.md",
-      "lines": 21
-    },
-    {
-      "path": "registro de progreso diario/2026-05-03.md",
-      "lines": 14
-    },
-    {
-      "path": "registro de progreso diario/2026-05-04.md",
-      "lines": 13
-    },
-    {
-      "path": "registro de progreso diario/README.md",
-      "lines": 1
-    },
-    {
-      "path": "_VAULT-INDEX.md",
-      "lines": 109
-    },
-    {
-      "path": "Yo y pendientes personales/Cuidado personal.md",
-      "lines": 19
-    },
-    {
-      "path": "Yo y pendientes personales/GYM.md",
-      "lines": 3
-    },
-    {
-      "path": "Yo y pendientes personales/Hábitos.md",
-      "lines": 1
-    },
-    {
-      "path": "Yo y pendientes personales/Objetivo Personal corto.md",
-      "lines": 0
-    }
-  ]
+  "tasksHash": "f69588fc68e99527bd9cf9b07bd928ce",
+  "lastChecked": "2026-06-09T15:11:00-05:00",
+  "tasksSnapshot": {
+    "hoy": [
+      "📚 Lectura diaria — ⏰ 6:00 AM — ⏳ — 🟡",
+      "🏋️ Pierna 1 (Cuádriceps) — ⏰ 7:00 AM — ⏳ — 🔴",
+      "💊 Creatina 3-5g post-entreno — ⏰ post-gym — ⏳ — 🟢",
+      "🤖 Bot MT5 — Backtest — ⏰ tarde — ⏳ — 🔴",
+      "👥 Analizar competidores Ad Library — ⏰ tarde — ⏳ — 🟡"
+    ],
+    "metaAds": "Fase 1",
+    "prototipoX": "pendiente plataforma hardware"
+  }
 }

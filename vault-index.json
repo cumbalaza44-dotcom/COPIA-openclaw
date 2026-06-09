@@ -1,6 +1,6 @@
 {
-  "tasksHash": "fe49ad87e2a47f22d3d82249b6d1de70",
-  "lastChecked": "2026-06-09T15:58:00-05:00",
+  "tasksHash": "605484d3e0c8d5584baf907d77ee5ccb",
+  "lastChecked": "2026-06-09T16:30:00-05:00",
   "tasksSnapshot": {
     "hoy": [
       "📚 Lectura diaria — ⏰ 6:00 AM — ⏳ — 🟡",
@@ -8,9 +8,8 @@
       "💊 Creatina 3-5g post-entreno — ⏰ post-gym — ⏳ — 🟢",
       "🤖 Bot MT5 — Backtest — ⏰ tarde — ⏳ — 🔴",
       "👥 Analizar competidores Ad Library — ⏰ tarde — ⏳ — 🟡",
-      "🏥 Cambio de EPS — — ✅ — 🟢"
-    ],
-    "metaAds": "Fase 1",
-    "prototipoX": "pendiente plataforma hardware"
+      "🏥 Cambio de EPS — — ✅ — 🟢",
+      "📄 Hoja de vida mamá — buscar empleo — 🔄 ahora — 🔴 — 🔄"
+    ]
   }
 }

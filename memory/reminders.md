@@ -33,3 +33,5 @@
 ### 2026-06-10 — Martes
 - ⏰ 06:00 — 📚 Lectura diaria
 - ⏰ 07:00 — 🏋️ Pierna 1 (Cuádriceps) — Reto fitness junio Día 5
+- 2026-06-10 00:05:04 | 2026-06-10 06:00 -05 | 📚 Lectura diaria
+- 2026-06-10 00:05:04 | 2026-06-10 07:00 -05 | 🏋️ Espalda + Bíceps — Reto fitness junio (Día 6)

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de Vida — Elcira Bolívar Hoyos</title>
+
+<style>
+ @page {
+ margin: 0;
+ size: 215.9mm 279.4mm; /* 4A / Carta / Letter */
+ }
+
+ *{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ }
+
+ body{
+ font-family:'Inter','Segoe UI',Arial,sans-serif;
+ background:#f5f3f0;
+ display:flex;
+ justify-content:center;
+ padding:40px 20px;
+ color:#2c2c2c;
+ line-height:1.5;
+ }
+
+ .page{
+ width:215.9mm;
+ min-height:279.4mm;
+ background:#fff;
+ box-shadow:0 12px 40px rgba(0,0,0,.08);
+ overflow:hidden;
+ }
+
+ /* ================= HEADER ================= */
+
+ .header{
+ background:#2c2c2c;
+ color:#fff;
+ padding:30px 42px;
+ display:flex;
+ align-items:center;
+ gap:24px;
+ position:relative;
+ }
+
+ .header::after{
+ content:'';
+ position:absolute;
+ bottom:0;
+ left:0;
+ right:0;
+ height:4px;
+ background:linear-gradient(90deg,#d9753d,#e8924e,#d9753d);
+ }
+
+ .photo-frame{
+ width:100px;
+ height:120px;
+ border:2px solid rgba(255,255,255,.15);
+ border-radius:2px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ color:rgba(255,255,255,.35);
+ font-size:10px;
+ text-align:center;
+ flex-shrink:0;
+ }
+
+ .header-text{
+ flex:1;
+ }
+
+ .header h1{
+ font-size:27px;
+ font-weight:600;
+ letter-spacing:-.5px;
+ margin-bottom:4px;
+ }
+
+ .subtitle{
+ color:#d9753d;
+ font-size:15px;
+ letter-spacing:.3px;
+ margin-bottom:8px;
+ }
+
+ .quick-summary{
+ font-size:12.5px;
+ color:#d8d8d8;
+ line-height:1.55;
+ }
+
+ /* ================= BODY ================= */
+
+ .body{
+ padding:28px 42px 36px;
+ }
+
+ .two-col{
+ display:flex;
+ gap:18px;
+ margin-bottom:22px;
+ }
+
+ .col-left{
+ width:32%;
+ }
+
+ .col-right{
+ flex:1;
+ }
+
+ /* ================= INFO ================= */
+
+ .info-group{
+ border-left:3px solid #d9753d;
+ padding-left:14px;
+ margin-bottom:18px;
+ }
+
+ .group-title{
+ color:#d9753d;
+ font-size:10.5px;
+ font-weight:700;
+ text-transform:uppercase;
+ letter-spacing:1.2px;
+ margin-bottom:8px;
+ }
+
+ .info-line{
+ display:flex;
+ flex-direction:column;
+ margin-bottom:5px;
+ }
+
+ .label{
+ color:#888;
+ font-size:10px;
+ font-weight:600;
+ text-transform:uppercase;
+ letter-spacing:.4px;
+ margin-bottom:1px;
+ }
+
+ .value{
+ font-size:12.5px;
+ line-height:1.4;
+ }
+
+ /* ================= SECTIONS ================= */
+
+ .section{
+ margin-bottom:20px;
+ }
+
+ .section-title{
+ display:flex;
+ align-items:center;
+ gap:10px;
+ color:#d9753d;
+ font-size:10.5px;
+ font-weight:700;
+ text-transform:uppercase;
+ letter-spacing:1.2px;
+ margin-bottom:10px;
+ }
+
+ .section-title::after{
+ content:'';
+ flex:1;
+ height:1px;
+ background:#e2ddd8;
+ }
+
+ .perfil-text{
+ border-left:3px solid #d9753d;
+ padding-left:14px;
+ font-size:13px;
+ color:#444;
+ line-height:1.65;
+ }
+
+ /* ================= EXPERIENCE ================= */
+
+ .exp-item{
+ border-left:3px solid #d9753d;
+ padding-left:14px;
+ padding-bottom:14px;
+ margin-bottom:14px;
+ border-bottom:1px solid #ececec;
+ }
+
+ .exp-item:last-child{
+ border-bottom:none;
+ margin-bottom:0;
+ padding-bottom:0;
+ }
+
+ .exp-header h3{
+ font-size:13.5px;
+ font-weight:600;
+ color:#2c2c2c;
+ }
+
+ .exp-meta{
+ font-size:11.5px;
+ color:#999;
+ margin-top:3px;
+ display:flex;
+ flex-wrap:wrap;
+ gap:4px 12px;
+ }
+
+ .exp-relato{
+ margin-top:6px;
+ font-size:12.5px;
+ color:#555;
+ line-height:1.6;
+ }
+
+ /* ================= ACHIEVEMENTS ================= */
+
+ .logro-item{
+ border-left:3px solid #d9753d;
+ padding-left:14px;
+ margin-bottom:10px;
+ font-size:13px;
+ color:#444;
+ line-height:1.6;
+ }
+
+ .logro-item:last-child{
+ margin-bottom:0;
+ }
+
+ .logro-item strong{
+ color:#2c2c2c;
+ }
+
+ /* ================= SKILLS ================= */
+
+ .skills-row{
+ display:flex;
+ flex-wrap:wrap;
+ gap:6px;
+ }
+
+ .skill-dot{
+ background:#f4f1ee;
+ border:1px solid #e4e0db;
+ border-radius:4px;
+ padding:5px 10px;
+ font-size:11.5px;
+ line-height:1.3;
+ }
+
+ /* ================= EDUCATION ================= */
+
+ .edu-item{
+ border-left:3px solid #d9753d;
+ padding-left:14px;
+ }
+
+ .edu-item h3{
+ font-size:13.5px;
+ }
+
+ .date{
+ color:#888;
+ font-size:12px;
+ margin-top:2px;
+ }
+
+ @media print{
+ body{
+ background:white;
+ padding:0;
+ }
+
+ .page{
+ box-shadow:none;
+ }
+ }
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+ <div class="header">
+
+   <div class="photo-frame">
+   FOTO 3x4
+   </div>
+
+   <div class="header-text">
+
+   <h1>Elcira Bolívar Hoyos</h1>
+
+   <div class="subtitle">
+     Jefe de Cocina • Horno Azador • Parrilla
+   </div>
+
+   <div class="quick-summary">
+     +10 años de experiencia | Horno Azador | Parrilla |
+     Cocina Tradicional Colombiana | Coordinación de Personal |
+     Control de Inventarios
+   </div>
+
+   </div>
+
+ </div>
+
+ <div class="body">
+
+   <div class="two-col">
+
+   <!-- COLUMNA IZQUIERDA -->
+
+   <div class="col-left">
+
+     <div class="info-group">
+     <div class="group-title">Contacto</div>
+
+     <div class="info-line">
+       <span class="label">Teléfono</span>
+       <span class="value">311 708 3609</span>
+     </div>
+
+     <div class="info-line">
+       <span class="label">Correo</span>
+       <span class="value">elcirabolivar@gmail.com</span>
+     </div>
+
+     <div class="info-line">
+       <span class="label">Dirección</span>
+       <span class="value">
+       Calle 112N 49B-51<br>
+       Medellín, Antioquia
+       </span>
+     </div>
+     </div>
+
+     <div class="info-group">
+     <div class="group-title">Documento</div>
+
+     <div class="info-line">
+       <span class="label">Cédula</span>
+       <span class="value">27.093.674</span>
+     </div>
+     </div>
+
+     <div class="info-group">
+     <div class="group-title">Disponibilidad</div>
+
+     <div class="info-line">
+       <span class="label">Inicio</span>
+       <span class="value">Inmediata</span>
+     </div>
+
+     <div class="info-line">
+       <span class="label">Jornada</span>
+       <span class="value">Tiempo completo</span>
+     </div>
+
+     <div class="info-line">
+       <span class="label">Ubicación</span>
+       <span class="value">Medellín y Área Metropolitana</span>
+     </div>
+     </div>
+
+   </div>
+
+   <!-- COLUMNA DERECHA -->
+
+   <div class="col-right">
+
+     <div class="section">
+
+     <div class="section-title">
+       Perfil Profesional
+     </div>
+
+     <div class="perfil-text">
+       Cocinera profesional con más de 10 años de experiencia en cocina
+       tradicional colombiana, parrilla y horno azador. He liderado
+       cocinas de alto volumen, coordinado personal, gestionado
+       inventarios y mantenido altos estándares de calidad e higiene.
+       Me caracterizo por mi responsabilidad, compromiso, organización
+       y capacidad para trabajar bajo presión, garantizando siempre un
+       servicio eficiente y una excelente experiencia para el cliente.
+     </div>
+
+     </div>
+
+   </div>
+
+   </div>
+
+   <!-- EXPERIENCIA -->
+
+   <div class="section">
+
+   <div class="section-title">
+     Experiencia Laboral
+   </div>
+
+   <div class="exp-item">
+
+     <div class="exp-header">
+     <h3>Jefe de Cocina y Horno Azador</h3>
+     </div>
+
+     <div class="exp-meta">
+     <span>🏢 Asados MJ · Medellín</span>
+     <span>📅 Marzo 2023 – Abril 2026</span>
+     <span>📞 300 603 1421</span>
+     </div>
+
+     <div class="exp-relato">
+     Durante más de tres años estuve al frente de la cocina, siendo
+     responsable de la preparación de carnes al horno azador y parrilla,
+     coordinación del personal, recepción y control de insumos, manejo
+     básico de caja y apoyo en atención al cliente cuando era necesario.
+     Mi principal responsabilidad fue garantizar la calidad de los
+     productos y el correcto funcionamiento de la cocina durante jornadas
+     de alta demanda.
+     </div>
+
+   </div>
+
+   <div class="exp-item">
+
+     <div class="exp-header">
+     <h3>Auxiliar de Cocina General</h3>
+     </div>
+
+     <div class="exp-meta">
+     <span>🏢 Organización La Merced · Pasto</span>
+     <span>📅 Diciembre 2017 – Enero 2020</span>
+     <span>📞 729 6000 / 723 8830</span>
+     </div>
+
+     <div class="exp-relato">
+     Participé en la preparación y producción de alimentos para grandes
+     volúmenes de servicio, cumpliendo estrictamente los protocolos de
+     higiene, manipulación de alimentos y organización de cocina.
+     Esta experiencia fortaleció mi capacidad para trabajar eficientemente
+     bajo presión sin comprometer la calidad del servicio.
+     </div>
+
+   </div>
+
+   <div class="exp-item">
+
+     <div class="exp-header">
+     <h3>Oficios Varios</h3>
+     </div>
+
+     <div class="exp-meta">
+     <span>🏢 Casa Arcoiris TEI · Pasto</span>
+     <span>📅 Junio 2012 – Enero 2016</span>
+     <span>📞 313 382 4604</span>
+     </div>
+
+     <div class="exp-relato">
+     Apoyé actividades relacionadas con cocina, mantenimiento y
+     organización general de las instalaciones. Esta experiencia me
+     permitió desarrollar disciplina, responsabilidad, compromiso laboral
+     y capacidad de trabajo en equipo, habilidades que posteriormente
+     impulsaron mi crecimiento profesional en el sector gastronómico.
+     </div>
+
+   </div>
+
+   </div>
+
+   <!-- LOGROS -->
+
+   <div class="section">
+
+   <div class="section-title">
+     Logros Destacados
+   </div>
+
+   <div class="logro-item">
+     <strong>Lideré la cocina de Asados MJ durante más de 3 años</strong>,
+     coordinando las actividades diarias del equipo de trabajo y garantizando
+     la calidad constante de los productos preparados en horno azador y
+     parrilla durante jornadas de alta demanda.
+   </div>
+
+   <div class="logro-item">
+     <strong>Optimicé el uso de insumos y el control de inventarios</strong>,
+     reduciendo desperdicios mediante una adecuada rotación de productos,
+     planificación de compras y supervisión permanente de existencias.
+   </div>
+
+   <div class="logro-item">
+     <strong>Capacité y acompañé a nuevos integrantes del equipo de cocina</strong>,
+     facilitando su adaptación a los procesos de preparación,
+     manipulación de alimentos y organización del área de trabajo.
+   </div>
+
+   <div class="logro-item">
+     <strong>Desarrollé experiencia laboral en distintos entornos de trabajo</strong>,
+     adaptándome rápidamente a nuevos equipos, procesos operativos y
+     exigencias de servicio, manteniendo altos estándares de desempeño.
+   </div>
+
+   </div>
+
+   <div class="two-col">
+
+   <!-- HABILIDADES -->
+
+   <div class="col-left">
+
+     <div class="section">
+
+     <div class="section-title">
+       Habilidades
+     </div>
+
+     <div class="skills-row">
+
+       <span class="skill-dot">Horno azador</span>
+       <span class="skill-dot">Parrilla y carnes</span>
+       <span class="skill-dot">Cocina tradicional colombiana</span>
+       <span class="skill-dot">Coordinación de personal</span>
+       <span class="skill-dot">Control de inventarios</span>
+       <span class="skill-dot">Recepción de insumos</span>
+       <span class="skill-dot">Manipulación de alimentos</span>
+       <span class="skill-dot">Higiene alimentaria</span>
+       <span class="skill-dot">Atención al cliente</span>
+       <span class="skill-dot">Trabajo bajo presión</span>
+       <span class="skill-dot">Organización de cocina</span>
+       <span class="skill-dot">Trabajo en equipo</span>
+
+     </div>
+
+     </div>
+
+   </div>
+
+   <!-- EDUCACIÓN -->
+
+   <div class="col-right">
+
+     <div class="section">
+
+     <div class="section-title">
+       Formación Académica
+     </div>
+
+     <div class="edu-item">
+       <h3>Bachiller Académico</h3>
+       <div class="date">
+       Julio de 2009
+       </div>
+     </div>
+
+     </div>
+
+   </div>
+
+   </div>
+
+ </div>
+
+</div>
+
+</body>
+</html>

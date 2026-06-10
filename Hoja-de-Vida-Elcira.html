@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de Vida — Elcira Bolívar Hoyos</title>
+<style>
+  @page { margin: 0; size: A4; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f3f0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #2c2c2c;
+    line-height: 1.55;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  /* Header */
+  .header {
+    background: #2c2c2c;
+    color: #fafafa;
+    padding: 36px 48px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #d9753d, #e8924e, #d9753d);
+  }
+  .photo-frame {
+    width: 110px;
+    height: 135px;
+    border: 2px solid rgba(255,255,255,0.15);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.04);
+    flex-shrink: 0;
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+    text-align: center;
+    letter-spacing: 0.3px;
+  }
+  .header-text { flex: 1; }
+  .header h1 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-bottom: 4px;
+    color: #fafafa;
+  }
+  .header .subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    color: #d9753d;
+    letter-spacing: 0.3px;
+  }
+
+  .body { padding: 36px 48px 44px; }
+
+  .two-col {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .col-left { width: 38%; }
+  .col-right { flex: 1; }
+
+  .info-group {
+    margin-bottom: 24px;
+    border-left: 2.5px solid #d9753d;
+    padding-left: 16px;
+  }
+  .info-group:last-child { margin-bottom: 0; }
+
+  .group-title {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #d9753d;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    margin-bottom: 10px;
+  }
+
+  .info-line {
+    font-size: 13px;
+    margin-bottom: 6px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .info-line .label {
+    font-weight: 500;
+    color: #888;
+    min-width: 90px;
+    flex-shrink: 0;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .info-line .value {
+    color: #2c2c2c;
+    font-weight: 400;
+  }
+
+  .section {
+    margin-bottom: 26px;
+  }
+  .section:last-child { margin-bottom: 0; }
+
+  .section-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #d9753d;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e0ddd8;
+  }
+
+  .perfil-text {
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.7;
+    border-left: 2.5px solid #d9753d;
+    padding-left: 16px;
+  }
+
+  /* Logros en lenguaje humano */
+  .logros-list {
+    list-style: none;
+    padding: 0;
+  }
+  .logro-item {
+    border-left: 2.5px solid #d9753d;
+    padding-left: 16px;
+    margin-bottom: 12px;
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.6;
+  }
+  .logro-item:last-child { margin-bottom: 0; }
+  .logro-item strong { color: #2c2c2c; font-weight: 600; }
+
+  .exp-item {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+    border-left: 2.5px solid #d9753d;
+    padding-left: 16px;
+  }
+  .exp-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+  .exp-header { margin-bottom: 4px; }
+  .exp-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c2c2c;
+  }
+  .exp-meta {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+  }
+  .exp-meta span { white-space: nowrap; }
+
+  /* Relato de lo que hizo en cada trabajo */
+  .exp-relato {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 6px;
+  }
+  .exp-relato strong { color: #d9753d; font-weight: 600; }
+
+  .skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .skill-dot {
+    font-size: 12.5px;
+    color: #3a3a3a;
+    background: #f3f1ee;
+    padding: 5px 14px;
+    border-radius: 3px;
+    font-weight: 400;
+    border: 1px solid #e6e3de;
+  }
+
+  .edu-item {
+    border-left: 2.5px solid #d9753d;
+    padding-left: 16px;
+    margin-bottom: 10px;
+  }
+  .edu-item h3 {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #2c2c2c;
+  }
+  .edu-item .date {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .disp-line {
+    font-size: 13px;
+    color: #555;
+    border-left: 2.5px solid #d9753d;
+    padding-left: 16px;
+    margin-bottom: 5px;
+  }
+  .disp-line:last-child { margin-bottom: 0; }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; border-radius: 0; }
+    .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="photo-frame">[Foto<br>3×4]</div>
+    <div class="header-text">
+      <h1>Elcira Bolívar Hoyos</h1>
+      <div class="subtitle">Jefe de Cocina y Horno Azador</div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="two-col">
+      <div class="col-left">
+        <div class="info-group">
+          <div class="group-title">Contacto</div>
+          <div class="info-line"><span class="label">Teléfono</span><span class="value">311 708 3609</span></div>
+          <div class="info-line"><span class="label">Email</span><span class="value">elcirabolivar@gmail.com</span></div>
+          <div class="info-line"><span class="label">Dirección</span><span class="value">Calle 112N 49b-51<br>Medellín, Antioquia</span></div>
+        </div>
+        <div class="info-group">
+          <div class="group-title">Documento</div>
+          <div class="info-line"><span class="label">Cédula</span><span class="value">C.C. 27.093.674</span></div>
+          <div class="info-line"><span class="label">Nacimiento</span><span class="value">28 de abril de 1973</span></div>
+          <div class="info-line"><span class="label">Lugar</span><span class="value">Bolívar, Cauca</span></div>
+          <div class="info-line"><span class="label">Nacionalidad</span><span class="value">Colombiana</span></div>
+        </div>
+        <div class="info-group">
+          <div class="group-title">Disponibilidad</div>
+          <div class="info-line"><span class="label">Inicio</span><span class="value">Inmediata</span></div>
+          <div class="info-line"><span class="label">Jornada</span><span class="value">Tiempo completo</span></div>
+          <div class="info-line"><span class="label">Ubicación</span><span class="value">Medellín / Área metropolitana</span></div>
+        </div>
+      </div>
+
+      <div class="col-right">
+        <div class="section">
+          <div class="section-title">Perfil</div>
+          <div class="perfil-text">
+            Más de diez años dedicados a la cocina profesional, con especialidad en parrilla,
+            horno azador y cocina tradicional colombiana. He liderado cocinas de alto volumen,
+            coordinado equipos de trabajo y mantenido estándares de calidad que mis empleadores
+            anteriores han valorado. Me comprometo con cada puesto como si fuera propio:
+            responsable, honesta y con amor por lo que hago.
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Logros</div>
+          <div class="logro-list">
+            <div class="logro-item">
+              <strong>Lideré la cocina de Asados MJ durante tres años</strong>, donde aprendí
+              a manejar el horno azador como ninguna y a mantener la calidad incluso cuando
+              el local estaba lleno y el tiempo apretaba.
+            </div>
+            <div class="logro-item">
+              <strong>Aprendí a estirar los insumos sin bajar la calidad</strong> — controlando
+              inventarios, rotando productos y reduciendo mermas. En cocina, cada peso cuenta.
+            </div>
+            <div class="logro-item">
+              <strong>Formé y coordiné personal nuevo</strong> en cocina, enseñándoles desde
+              la técnica de corte hasta cómo mantener el puesto limpio y organizado en hora pico.
+            </div>
+            <div class="logro-item">
+              <strong>Trabajé en tres ciudades distintas</strong> (Pasto y Medellín), adaptándome
+              rápido a cada cocina, cada equipo y cada cliente. La experiencia me enseñó a
+              resolver sobre la marcha.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Experiencia</div>
+
+      <div class="exp-item">
+        <div class="exp-header"><h3>Jefe de Cocina y Horno Azador</h3></div>
+        <div class="exp-meta">
+          <span>🏢 Asados MJ · Medellín</span>
+          <span>📅 Mar 2023 — Abr 2026</span>
+          <span>📞 300 603 1421</span>
+        </div>
+        <div class="exp-relato">
+          Estuve al frente de la cocina durante tres años. Me encargaba de preparar las carnes
+          al horno y la parrilla, organizar el día a día del personal, recibir y revisar los
+          insumos, y dejar todo listo antes de que abriéramos. También manejaba caja y atención
+          al cliente cuando el negocio lo requería. Aprendí a mantener la calidad cuando más
+          presión había.
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header"><h3>Auxiliar de Cocina General</h3></div>
+        <div class="exp-meta">
+          <span>🏢 Organización La Merced · Pasto, Nariño</span>
+          <span>📅 Dic 2017 — Ene 2020</span>
+          <span>📞 729 6000 / 723 8830</span>
+        </div>
+        <div class="exp-relato">
+          Apoyaba la cocina general en preparación de alimentos, manteniendo los estándares
+          de higiene y organización que la institución exigía. Trabajaba con volúmenes grandes
+          de producción, lo que me enseñó a ser eficiente sin descuidar la calidad del plato.
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header"><h3>Oficios Varios</h3></div>
+        <div class="exp-meta">
+          <span>🏢 Casa Arcoiris TEI · Pasto, Nariño</span>
+          <span>📅 Jun 2012 — Ene 2016</span>
+          <span>📞 313 382 4604</span>
+        </div>
+        <div class="exp-relato">
+          Mis primeros años en el mundo laboral. Aquí aprendí disciplina, responsabilidad y
+          el valor de llegar temprano. Hacía de todo en la cocina y el mantenimiento del lugar,
+          y esa base me sirvió para crecer profesionalmente después.
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="col-left">
+        <div class="section">
+          <div class="section-title">Habilidades</div>
+          <div class="skills-row">
+            <span class="skill-dot">Horno azador</span>
+            <span class="skill-dot">Parrilla y carnes</span>
+            <span class="skill-dot">Cocina tradicional</span>
+            <span class="skill-dot">Coordinación de personal</span>
+            <span class="skill-dot">Manejo de inventarios</span>
+            <span class="skill-dot">Higiene alimentaria</span>
+            <span class="skill-dot">Trabajo en equipo</span>
+            <span class="skill-dot">Atención al cliente</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="section">
+          <div class="section-title">Formación</div>
+          <div class="edu-item">
+            <h3>Bachiller Académico</h3>
+            <div class="date">Julio 2009</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

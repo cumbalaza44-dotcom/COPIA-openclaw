@@ -39,11 +39,7 @@ def next_weekday(now, target_wd):
 
 def parse_time_of_day(s: str):
   s = s.strip().lower()
-  # 15:30
-  m = re.match(r'^(\d{1,2}):(\d{2})$', s)
-  if m:
-    return int(m.group(1)), int(m.group(2))
-  # 3pm / 3 pm / 3:30pm
+  # 3pm / 3 pm / 3:30pm / 07:00am
   m = re.match(r'^(\d{1,2})(?::(\d{2}))?\s*(am|pm)$', s)
   if m:
     h = int(m.group(1))
@@ -54,6 +50,10 @@ def parse_time_of_day(s: str):
     if ap == 'am' and h == 12:
       h = 0
     return h, mi
+  # 15:30
+  m = re.match(r'^(\d{1,2}):(\d{2})$', s)
+  if m:
+    return int(m.group(1)), int(m.group(2))
   return None
 
 
@@ -84,15 +84,18 @@ def main():
   # Shortcuts
   if text in ('hoy',):
     dt = now.replace(hour=17, minute=0, second=0, microsecond=0)
+    dt = ensure_future(dt, now)
     print(dt.isoformat()); return
   if text in ('mañana','manana'):
     dt = (now + timedelta(days=1)).replace(hour=9, minute=0, second=0, microsecond=0)
     print(dt.isoformat()); return
   if text in ('esta tarde','hoy en la tarde'):
     dt = now.replace(hour=15, minute=0, second=0, microsecond=0)
+    dt = ensure_future(dt, now)
     print(dt.isoformat()); return
   if text in ('esta noche','hoy en la noche'):
     dt = now.replace(hour=20, minute=0, second=0, microsecond=0)
+    dt = ensure_future(dt, now)
     print(dt.isoformat()); return
 
   # Patterns: "hoy a las 5", "mañana a las 3pm"
@@ -104,6 +107,7 @@ def main():
     if hm:
       base = now if day == 'hoy' else (now + timedelta(days=1))
       dt = base.replace(hour=hm[0], minute=hm[1], second=0, microsecond=0)
+      dt = ensure_future(dt, now)
       print(dt.isoformat()); return
 
   # Weekday: "el lunes a las 3pm" / "lunes 15:00"
@@ -123,6 +127,7 @@ def main():
     y,mo,d = int(m.group(1)), int(m.group(2)), int(m.group(3))
     hm = parse_time_of_day(m.group(4) or '09:00')
     dt = datetime(y,mo,d,hm[0],hm[1],tzinfo=tz)
+    dt = ensure_future(dt, now)
     print(dt.isoformat()); return
 
   # Date formats: DD/MM/YYYY [HH:MM]
@@ -131,6 +136,7 @@ def main():
     d,mo,y = int(m.group(1)), int(m.group(2)), int(m.group(3))
     hm = parse_time_of_day(m.group(4) or '09:00')
     dt = datetime(y,mo,d,hm[0],hm[1],tzinfo=tz)
+    dt = ensure_future(dt, now)
     print(dt.isoformat()); return
 
   # "15 de marzo 3pm" / "15 marzo 15:00"
@@ -150,7 +156,21 @@ def main():
         dt = datetime(y+1,mon,d,hm[0],hm[1],tzinfo=tz)
       print(dt.isoformat()); return
 
+  # Bare time: "7:00", "15:30", "3pm" → treat as "hoy a las..."
+  hm = parse_time_of_day(text)
+  if hm:
+    dt = now.replace(hour=hm[0], minute=hm[1], second=0, microsecond=0)
+    dt = ensure_future(dt, now)
+    print(dt.isoformat()); return
+
   raise SystemExit(f"Could not parse time expression: {args.when}")
+
+
+def ensure_future(dt, now):
+  """If dt is in the past, push to next day (same time)."""
+  if dt <= now:
+    dt = dt + timedelta(days=1)
+  return dt
 
 
 if __name__ == '__main__':

@@ -29,3 +29,7 @@
 
 ## 2026-05-31
 - **06:00 diario** Bogotá — 📚 Lectura diaria: nota en vault (`865f12b4`) — hábito de lectura, storytelling, elocuencia
+
+### 2026-06-10 — Martes
+- ⏰ 06:00 — 📚 Lectura diaria
+- ⏰ 07:00 — 🏋️ Pierna 1 (Cuádriceps) — Reto fitness junio Día 5

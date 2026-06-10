@@ -1,15 +1,16 @@
 {
-  "tasksHash": "605484d3e0c8d5584baf907d77ee5ccb",
-  "lastChecked": "2026-06-09T16:30:00-05:00",
+  "tasksHash": "262b57171ed9fc7bab0d8a1ce3ed4d96",
+  "lastChecked": "2026-06-09T23:20:00-05:00",
   "tasksSnapshot": {
     "hoy": [
-      "📚 Lectura diaria — ⏰ 6:00 AM — ⏳ — 🟡",
-      "🏋️ Pierna 1 (Cuádriceps) — ⏰ 7:00 AM — ⏳ — 🔴",
-      "💊 Creatina 3-5g post-entreno — ⏰ post-gym — ⏳ — 🟢",
-      "🤖 Bot MT5 — Backtest — ⏰ tarde — ⏳ — 🔴",
-      "👥 Analizar competidores Ad Library — ⏰ tarde — ⏳ — 🟡",
-      "🏥 Cambio de EPS — — ✅ — 🟢",
-      "📄 Hoja de vida mamá — buscar empleo — 🔄 ahora — 🔴 — 🔄"
+      "📚 Lectura diaria — ⏰ 6:00 AM — ✅ — 🟡",
+      "🏋️ Pierna 1 — ⏰ 7:00 AM — ✅ — 🔴",
+      "💊 Creatina post-gym — ✅ — 🟢",
+      "🤖 Bot MT5 — Plan arquitectura — ⏰ mañana — ⏳ — 🔴",
+      "🎓 Curso Meta Ads 9h — Parte 1 (4.5h) — ⏰ mañana — ⏳ — 🟡",
+      "🏥 Cambio de EPS — ✅ — 🟢",
+      "📄 Hoja de vida mamá (80%) — 🔄 — 🔴",
+      "🛠️ Ajustes End-of-Day — ⏰ 6:30 AM — 🔄 — 🔴"
     ]
   }
 }

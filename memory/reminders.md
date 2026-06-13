@@ -37,3 +37,6 @@
 - 2026-06-10 00:05:04 | 2026-06-10 07:00 -05 | 🏋️ Espalda + Bíceps — Reto fitness junio (Día 6)
 - 2026-06-11 00:05:03 | 2026-06-11 06:00 -05 | 📚 Lectura diaria
 - 2026-06-11 00:05:03 | 2026-06-11 07:00 -05 | 🏋️ Pecho + Tríceps — Reto fitness junio (Día 7)
+- 2026-06-12 00:05:04 | 2026-06-12 06:00 -05 | 📚 Lectura diaria
+- 2026-06-12 00:05:04 | 2026-06-12 07:00 -05 | 🏋️ Pierna 2 — Isquiotibiales — Reto fitness junio (Día 8)
+- 2026-06-12 00:05:04 | 2026-06-12 09:00 -05 | 🤖 Bot MT5 — Diseñar plan de arquitectura (45min, deadline 10:30 AM)

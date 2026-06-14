@@ -40,3 +40,8 @@
 - 2026-06-12 00:05:04 | 2026-06-12 06:00 -05 | 📚 Lectura diaria
 - 2026-06-12 00:05:04 | 2026-06-12 07:00 -05 | 🏋️ Pierna 2 — Isquiotibiales — Reto fitness junio (Día 8)
 - 2026-06-12 00:05:04 | 2026-06-12 09:00 -05 | 🤖 Bot MT5 — Diseñar plan de arquitectura (45min, deadline 10:30 AM)
+- 2026-06-13 00:05:03 | 2026-06-13 09:00 -05 | 🏃 Descanso activo — movilidad articular + caminar 30min
+- 2026-06-13 00:05:03 | 2026-06-13 10:00 -05 | 🤖 Bot MT5 — Diseñar plan de arquitectura (nuevo slot, 45min)
+- 2026-06-13 00:05:03 | 2026-06-13 11:00 -05 | 📋 Generar time box semanal
+- 2026-06-13 00:05:03 | 2026-06-13 16:00 -05 | 🎓 Meta Ads — 40min estudio
+- 2026-06-13 00:05:03 | 2026-06-13 17:00 -05 | 🧹 Lavar prendas

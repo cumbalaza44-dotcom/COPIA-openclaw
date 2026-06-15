@@ -1,25 +1,21 @@
 {
-  "tasksHash": "905ce06f32e1c079c21d0b805ec5ee84",
-  "lastChecked": "2026-06-14T10:30:00-05:00",
+  "tasksHash": "e1b5423ec1bc4e6253d8a277c0ad3ca1",
+  "lastChecked": "2026-06-15T07:37:00-05:00",
   "tasksSnapshot": {
     "hoy": [
-      "📚 Lectura diaria — ⏰ 8:00 AM — ⏳ — 🟢",
-      "🤖 Ghost Trader — Diseñar plan de arquitectura — ⏰ 9:30 AM — ⏳ — 🔴",
-      "📝 Migrar notas de otras fuentes a Obsidian — ⏰ 11:00 AM — ⏳ — 🔴",
-      "🏍️ Limpieza moto + mantenimiento cadena — ⏰ 3:00 PM — ⏳ — 🟡",
-      "🏠 Organizar habitación — ⏰ 4:00 PM — ⏳ — 🟡"
+      "📚 Lectura diaria — ⏰ 6:00 AM — ✅ — 🟢",
+      "🏋️ Tren Superior — Reto fitness junio (Día 9) — ⏰ 6:30 AM — ⏳ — 🔴",
+      "💊 Creatina 3-5g post-entreno — ⏰ post-gym — ⏳ — 🟢",
+      "🤖 Ghost Trader — Arquitectura FASE 1 (60min) — ⏰ 8:45 AM — ⏳ — 🔴",
+      "🎓 Meta Ads — Fundamentos: definir nicho (45min) — ⏰ 10:00 AM — ⏳ — 🟡",
+      "📝 Migrar notas Obsidian (30min) — ⏰ 10:45 AM — ⏳ — 🔴"
     ],
-    "sabado13": [
+    "domingo14": [
       "📚 Lectura diaria — ✅",
-      "🏃 Descanso activo — ✅",
-      "🤖 Ghost Trader — ✅",
-      "🏍️ Limpieza moto — ✅",
-      "✂️ Cortar cabello — ✅",
-      "🧹 Lavar prendas — ✅",
-      "📋 Time box semanal — ⏳",
-      "🏠 Organizar habitación — ✅",
+      "🤖 Ghost Trader — Diseñar plan — ⏳",
       "📝 Migrar notas — ⏳",
-      "🎓 Meta Ads 45min — ✅"
+      "🏍️ Limpieza moto — ✅",
+      "🏠 Organizar habitación — ✅"
     ]
   }
 }

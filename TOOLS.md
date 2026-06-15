@@ -16,28 +16,13 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ### Comandos clave
 ```bash
-# Búsqueda rápida (BM25, sin embeddings)
-qmd search "Meta Ads" --json -n 5
-
-# Búsqueda semántica (requiere embeddings)
-qmd vsearch "cómo deployar" --json -n 5
-
-# Query híbrido (BM25 + vector + reranking, mejor calidad)
-qmd query "prototipo moto sensor" --json -n 5
-
-# Retrieve documento específico
-qmd get "qmd://vault/tasks.md"
-qmd get "#abc123"  # por docid
-
-# Listar colección
-qmd ls vault
-
-# Status del índice
-qmd status
-
-# Re-indexar después de cambios
-qmd update
-qmd embed  # re-generar embeddings
+qmd search "query" --json -n 5    # Búsqueda rápida (BM25)
+qmd vsearch "query" --json -n 5   # Semántica (embeddings)
+qmd query "query" --json -n 5     # Híbrido (BM25 + vector + reranking)
+qmd get "qmd://vault/path"        # Retrieve documento específico
+qmd ls vault                      # Listar colección
+qmd status                        # Status del índice
+qmd update && qmd embed           # Re-indexar + re-generar embeddings
 ```
 
 ### Regla de uso

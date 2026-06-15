@@ -1,16 +1,25 @@
 {
-  "tasksHash": "262b57171ed9fc7bab0d8a1ce3ed4d96",
-  "lastChecked": "2026-06-09T23:20:00-05:00",
+  "tasksHash": "905ce06f32e1c079c21d0b805ec5ee84",
+  "lastChecked": "2026-06-14T10:30:00-05:00",
   "tasksSnapshot": {
     "hoy": [
-      "📚 Lectura diaria — ⏰ 6:00 AM — ✅ — 🟡",
-      "🏋️ Pierna 1 — ⏰ 7:00 AM — ✅ — 🔴",
-      "💊 Creatina post-gym — ✅ — 🟢",
-      "🤖 Bot MT5 — Plan arquitectura — ⏰ mañana — ⏳ — 🔴",
-      "🎓 Curso Meta Ads 9h — Parte 1 (4.5h) — ⏰ mañana — ⏳ — 🟡",
-      "🏥 Cambio de EPS — ✅ — 🟢",
-      "📄 Hoja de vida mamá (80%) — 🔄 — 🔴",
-      "🛠️ Ajustes End-of-Day — ⏰ 6:30 AM — 🔄 — 🔴"
+      "📚 Lectura diaria — ⏰ 8:00 AM — ⏳ — 🟢",
+      "🤖 Ghost Trader — Diseñar plan de arquitectura — ⏰ 9:30 AM — ⏳ — 🔴",
+      "📝 Migrar notas de otras fuentes a Obsidian — ⏰ 11:00 AM — ⏳ — 🔴",
+      "🏍️ Limpieza moto + mantenimiento cadena — ⏰ 3:00 PM — ⏳ — 🟡",
+      "🏠 Organizar habitación — ⏰ 4:00 PM — ⏳ — 🟡"
+    ],
+    "sabado13": [
+      "📚 Lectura diaria — ✅",
+      "🏃 Descanso activo — ✅",
+      "🤖 Ghost Trader — ✅",
+      "🏍️ Limpieza moto — ✅",
+      "✂️ Cortar cabello — ✅",
+      "🧹 Lavar prendas — ✅",
+      "📋 Time box semanal — ⏳",
+      "🏠 Organizar habitación — ✅",
+      "📝 Migrar notas — ⏳",
+      "🎓 Meta Ads 45min — ✅"
     ]
   }
 }

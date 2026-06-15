@@ -45,3 +45,8 @@
 - 2026-06-13 00:05:03 | 2026-06-13 11:00 -05 | 📋 Generar time box semanal
 - 2026-06-13 00:05:03 | 2026-06-13 16:00 -05 | 🎓 Meta Ads — 40min estudio
 - 2026-06-13 00:05:03 | 2026-06-13 17:00 -05 | 🧹 Lavar prendas
+- 2026-06-14 00:05:03 | 2026-06-14 08:00 -05 | 📚 Lectura diaria
+- 2026-06-14 00:05:03 | 2026-06-14 09:30 -05 | 🤖 Ghost Trader — Diseñar plan de arquitectura (slot de recuperación, 45min)
+- 2026-06-14 00:05:03 | 2026-06-14 11:00 -05 | 📝 Migrar notas de otras fuentes a Obsidian
+- 2026-06-14 00:05:03 | 2026-06-14 15:00 -05 | 🏍️ Limpieza moto + mantenimiento cadena (pendiente)
+- 2026-06-14 00:05:04 | 2026-06-14 16:00 -05 | 🏠 Organizar habitación (pendiente)

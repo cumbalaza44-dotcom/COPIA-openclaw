@@ -12,7 +12,7 @@ inbound_meta.chat_type
 
 ```
 EVERY TURN
-├── git pull --ff-only
+├── git pull --ff-only -q
 ├── read vault-index.json (hash + snapshot previo)
 ├── read obsidian-vault/tasks.md (~40-60 tok)
 ├── compute hash actual de tasks.md
@@ -95,8 +95,10 @@ REGLAS:
 ## 🧠 MEMORY.md
 
 - Solo en main session. No en grupos.
-- Se puebla automáticamente al compactar Live→Archived.
+- **TRIGGER de compactación:** cuando `## Live` en daily note supere 40 líneas O al final de cada sesión (si hubo actividad registable).
+- Mover oldest bullets a Archived + copiar a MEMORY.md bajo `## YYYY-MM-DD`.
 - Si el header de fecha ya existe, append bullets.
+- Si MEMORY.md está vacío → leer últimos 3-5 archivos de `memory/` y compilar resumen.
 
 ## 📝 Regla de oro
 
@@ -138,6 +140,12 @@ Inactivos. Si añaden: hablar solo cuando mencionen o aporten valor. No comparti
 ## 💰 Token Economy
 
 ```
+PER-TURN BASELINE (~22-25k tok)
+├── system prompt (SOUL + AGENTS + IDENTITY + USER + TOOLS + MEMORY + workspace files)
+├── tool schemas (~20 tools, ~8-10k tok)
+├── historial 7 turnos (messages + tool_results + my replies)
+└── obsidian-vault/tasks.md (~40-60 tok) ← único payload variable
+
 EXEC OUTPUTS
 ├── truncar a 20 líneas max (head -20 / tail -20)
 ├── git pull → -q (quiet). Tool result mínimo
@@ -157,9 +165,10 @@ WRITES
 └── si múltiples edits en mismo turno → 1 solo commit
 
 TURN LIMITS
-├── max 3 tools por turno
+├── max 3 tools de ESCRITURA por turno (edits, exec con写入, write)
+├── Lecturas y comparaciones (read, hash, git pull) no cuentan
 ├── operación compleja → dividir en turnos separados
-├── conflictos git → 1 intento. Si falla → abortar + reportar
+├── conflictos git → 1 intento. Si falla → mostrar diff + preguntar
 └── si un turno se alarga → pasar al siguiente
 
 ALERTA
@@ -172,3 +181,18 @@ ALERTA
 Skills → leer `SKILL.md`. Notas locales → `TOOLS.md`.
 
 **Formateo:** Discord/WhatsApp → bullets, no tablas. Links → `<url>` para suprimir embeds.
+
+## 🧩 Skills Activas
+
+Solo las que realmente usamos:
+
+| Skill | Uso | Ubicación |
+|-------|-----|-----------|
+| arya-reminders | Recordatorios cron | workspace/skills/ |
+| healthcheck | Auditoría del servidor | openclaw/skills/ |
+| gog | Google Workspace (calendario, email) | openclaw/skills/ |
+| weather | Clima para Medellín | openclaw/skills/ |
+| session-logs | Debug de sesiones | openclaw/skills/ |
+| humanizer | Eliminar patrones de escritura IA | workspace/skills/ |
+
+Las demás skills (~50+) están disponibles en disco pero no se cargan en el system prompt. Solo se leen bajo demanda con `read SKILL.md`.

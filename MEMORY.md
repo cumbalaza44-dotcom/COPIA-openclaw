@@ -1,5 +1,11 @@
 # MEMORY.md
 
+## 2026-06-16
+- Ghost Trader: plan FASE 1-3 completado y aprobado — elevator pitch creado
+- Plan de construcción v2.1 guardado en vault (ADR)
+- Recordatorio 8:30 AM "descargar paquete del bolso" configurado
+- Lectura diaria completada
+
 ## 2026-06-14
 - Auditoría completa del system prompt: deduplicación SOUL/AGENTS, skills ajustadas a las activas
 - Vault sync operativo — submodule push order verificada

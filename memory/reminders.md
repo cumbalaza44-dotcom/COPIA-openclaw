@@ -52,3 +52,8 @@
 - 2026-06-14 00:05:04 | 2026-06-14 16:00 -05 | 🏠 Organizar habitación (pendiente)
 | 2026-06-16 06:14 | 2026-06-16 08:30 | Descargar paquete del bolso | 909849cb |
 | 2026-06-16 08:29 | 2026-06-16 19:20 | Actualizar OpenClaw a 2026.6.6 | 7b7a5d9a |
+
+## 2026-06-19 10:30 — Compra de sudaderas para deporte
+- **ID:** b9acd147-a6d6-43e1-972e-0564c8c0b797
+- **Tipo:** one-shot
+- **Solicitado:** Ghost X (Telegram)

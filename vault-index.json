@@ -1,14 +1,5 @@
 {
-  "tasksHash": "a1b2c3d4e5f6",
-  "lastChecked": "2026-06-21T20:00:00-05:00",
-  "tasksSnapshot": {
-    "hoy": [
-      "📚 Lectura diaria — ⏰ 6:00 AM — ⏳ — 🟢",
-      "🏋️ Tren Superior — Reto fitness junio — ⏰ 6:30 AM — ⏳ — 🔴",
-      "💊 Creatina 3-5g post-entreno — ⏰ post-gym — ⏳ — 🟢",
-      "🤖 Ghost Trader — Arquitectura FASE 2 (60min) — ⏰ 9:00 AM — ⏳ — 🔴",
-      "📝 Migrar notas Obsidian — FINALIZAR (45min) — ⏰ 10:00 AM — ⏳ — 🔴",
-      "🏠 Hogar pendientes — ⏰ 11:00 AM — ⏳ — 🟡"
-    ]
-  }
+  "tasksHash": "650bc81",
+  "tasksSnapshot": "tasks updated - clean week + horario L-V 8AM-5PM",
+  "lastChecked": "2026-06-21T21:03:00-05:00"
 }

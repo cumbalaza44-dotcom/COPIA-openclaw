@@ -1,15 +1,14 @@
 {
-  "tasksHash": "3bf64c3bcd2c122fec2f14525f1c7c34",
-  "lastChecked": "2026-06-15T23:55:00-05:00",
+  "tasksHash": "a1b2c3d4e5f6",
+  "lastChecked": "2026-06-21T20:00:00-05:00",
   "tasksSnapshot": {
     "hoy": [
       "📚 Lectura diaria — ⏰ 6:00 AM — ⏳ — 🟢",
-      "🏋️ Pierna 1 — Reto fitness junio (Día 10) — ⏰ 6:30 AM — ⏳ — 🔴",
+      "🏋️ Tren Superior — Reto fitness junio — ⏰ 6:30 AM — ⏳ — 🔴",
       "💊 Creatina 3-5g post-entreno — ⏰ post-gym — ⏳ — 🟢",
-      "🤖 Ghost Trader — Arquitectura FASE 1 (90min) — ⏰ 9:00 AM — ⏳ — 🔴",
-      "📝 Migrar notas Obsidian (45min) — ⏰ 8:15 AM — ⏳ — 🔴",
-      "🎓 Meta Ads — Definir nicho (45min) — ⏰ 10:45 AM — ⏳ — 🟡",
-      "🏠 Hogar pendientes — ⏰ 11:30 AM — ⏳ — 🟡"
+      "🤖 Ghost Trader — Arquitectura FASE 2 (60min) — ⏰ 9:00 AM — ⏳ — 🔴",
+      "📝 Migrar notas Obsidian — FINALIZAR (45min) — ⏰ 10:00 AM — ⏳ — 🔴",
+      "🏠 Hogar pendientes — ⏰ 11:00 AM — ⏳ — 🟡"
     ]
   }
 }

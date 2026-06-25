@@ -38,6 +38,7 @@
 - Intereses: Fitness, Tech, E-commerce, Finance, Video Editing
 - Idioma: Español neutral/formal con toque británico
 - Canal: Telegram directo
+- Lectura diaria: contenido fresco y variado, NO repetir temas ya leídos
 
 ## Infraestructura
 - QMD v2.5.3 instalado — índice embeddings local

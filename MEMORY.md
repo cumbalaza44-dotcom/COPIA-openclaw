@@ -44,3 +44,8 @@
 - QMD v2.5.3 instalado — índice embeddings local
 - Vault Obsidian como submodule con push order dual
 - Skills activas: arya-reminders, healthcheck, gog, weather, session-logs
+
+## Gym
+- Pendiente: Mr. Jair quiere una sola nota Gym.md con rutina correcta (Full Legs ambos días)
+- Eliminados todos los archivos anteriores por orden de Mr. Jair
+- Rutina a redefinir con Mr. Jair

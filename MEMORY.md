@@ -33,6 +33,15 @@
 - Preparación entorno OpenCode en PC local
 - Organización de habitación y limpieza de moto
 
+## 2026-07-07
+- MODO FANTASMA v1.0 lanzado — sistema de desarrollo integral autodidacta
+- 5 pilares: Investigar, Crear, Capturar, Comunicar, Documentar
+- Estructura diaria 30-40 min con micro-proyectos prácticos
+- Habilidades paralelas: composición visual, iluminación, storytelling, persuasión
+- Cron job actualizado (5:05 AM) — genera nota diaria con nueva estructura
+- Archivos maestros creados en vault: README + 4 guías de habilidades
+- Primera nota: 2026-07-07.md (TTS Kokoro como micro-proyecto)
+
 ## Preferencias
 - Ciudad: Medellín, Antioquia, Colombia (UTC-5)
 - Intereses: Fitness, Tech, E-commerce, Finance, Video Editing

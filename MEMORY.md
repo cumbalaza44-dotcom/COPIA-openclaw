@@ -1,5 +1,9 @@
 # MEMORY.md
 
+## 2026-07-16
+- 🔄 Cambio de rutina: Creatina ahora es **NOCHE** (antes era post-gym en la mañana)
+- Gym completado en la mañana
+
 ## 2026-06-16
 - Ghost Trader: plan FASE 1-3 completado y aprobado — elevator pitch creado
 - Plan de construcción v2.1 guardado en vault (ADR)

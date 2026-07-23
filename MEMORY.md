@@ -1,5 +1,10 @@
 # MEMORY.md
 
+## 2026-07-22
+- ✅ tasks.md actualizado a Miércoles 22/07 — HOY muestra la semana correcta
+- 💰 Gastos del día: Comida $6k + Combustible $12k + Medicamentos $2k = $20k COP
+- ⏳ Tareas pendientes: Lectura, Gym, Prototipo X (plataforma hardware), Creatina, IA diaria
+
 ## 2026-07-16
 - 🔄 Cambio de rutina: Creatina ahora es **NOCHE** (antes era post-gym en la mañana)
 - Gym completado en la mañana

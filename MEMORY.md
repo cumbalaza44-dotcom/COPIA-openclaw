@@ -51,6 +51,12 @@
 - Archivos maestros creados en vault: README + 4 guías de habilidades
 - Primera nota: 2026-07-07.md (TTS Kokoro como micro-proyecto)
 
+## 2026-07-24
+- 📄 Creado `FINANZAS-Y-PROYECTOS/Finanzas-y-proyectos/Prestamos.md` — registro de préstamos otorgados
+- 💰 Andrés me debe $20.000 COP (24/07/2026)
+- ✅ Lectura diaria completada
+- 📋 Tareas actualizadas a Vie 24/07 (Gym, Moto, Revisión semanal, Creatina)
+
 ## Preferencias
 - Ciudad: Medellín, Antioquia, Colombia (UTC-5)
 - Intereses: Fitness, Tech, E-commerce, Finance, Video Editing

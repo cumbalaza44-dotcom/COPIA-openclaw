@@ -12,6 +12,10 @@
     "productivity-automation-kit": {
       "version": "1.0.0",
       "installedAt": 1780966614927
+    },
+    "humanizer": {
+      "version": "1.0.0",
+      "installedAt": 1781282103718
     }
   }
 }

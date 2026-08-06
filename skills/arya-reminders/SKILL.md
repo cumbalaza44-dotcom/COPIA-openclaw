@@ -46,6 +46,66 @@ cat memory/reminders.md
 
 - No requiere APIs externas.
 - Usa el tool `cron` del Gateway (no hardcodea rutas ni IDs ajenos).
-- **Delivery:** Siempre incluye `channel` + `to` en el payload de entrega para evitar que el sistema resuelva a un target incorrecto (ej. `@heartbeat`).
-- **Chat ID:** Configurar `ARYA_TELEGRAM_CHAT_ID` o usar el default `7310779816`.
 - **sessionTarget:** `isolated` para one-shot (evita ensuciar la sesión principal).
+
+---
+
+## ✅ Checklist obligatorio (2 pasos)
+
+> **Siempre ambos. Sin excepciones.**
+
+### PASO 1 — Crear cron job
+
+```
+cron → action: add → job: {
+  name: "Recordatorio: <descripción>",
+  schedule: {
+    kind: "at",
+    at: "<ISO-8601 con offset -05:00>"
+  },
+  payload: {
+    kind: "agentTurn",
+    message: "Recordatorio: <mensaje>. Enviar por Telegram."
+  },
+  sessionTarget: "isolated",
+  delivery: {
+    mode: "announce",
+    channel: "telegram",
+    to: "7310779816"
+  },
+  enabled: true
+}
+```
+
+**Campos obligatorios:** `name`, `schedule.kind`, `schedule.at`, `payload.kind`, `payload.message`, `sessionTarget`, `delivery.mode`, `delivery.channel`, `delivery.to`
+
+**Errores comunes:**
+- ❌ Olvidar `delivery.channel` y `delivery.to` → el sistema resuelve a un target incorrecto
+- ❌ Usar `sessionTarget: "main"` en one-shot → ensucia la sesión principal
+- ❌ Usar `kind: "cron"` en vez de `kind: "at"` → se repite forever
+- ❌ Olvidar el offset `-05:00` → hora en UTC, no en Bogotá
+
+### PASO 2 — Registrar en memory/reminders.md
+
+```bash
+# Al final de la sección del día, agregar línea:
+| <timestamp actual> | <cuándo dispara> | <mensaje> | <cron job ID corto (8 chars)> |
+```
+
+**Ejemplo:**
+```
+## 2026-06-27
+| 2026-06-27 11:43 | 2026-06-27 21:00 | Investigar ciclo menstrual | 3f8d8419 |
+```
+
+---
+
+## 📐 Formato de schedule.at
+
+| Tipo | Formato | Ejemplo |
+|------|---------|--------|
+| Hoy a las 9pm | `AAAA-MM-DDTHH:00:00-05:00` | `2026-06-27T21:00:00-05:00` |
+| Mañana 7am | `AAAA-MM-DDTHH:00:00-05:00` | `2026-06-28T07:00:00-05:00` |
+| Próx. martes 4pm | Calcular fecha manual | `2026-06-30T16:00:00-05:00` |
+
+**Siempre `-05:00` (Bogotá). Nunca UTC.**

@@ -54,7 +54,7 @@ CADA TURNO, si hash de tasks.md cambió:
 
 2. ACTUAR según lo detectado:
    ├── Tarea nueva CON hora ⏰ HH:MM
-   │   → crear recordatorio (Arya) AL INSTANTE
+   │   → crear recordatorio (openclaw cron add) AL INSTANTE
    │   → notificar: "Detecté nueva tarea: [nombre] a las HH:MM"
    ├── Tarea marcada ✅
    │   → si tiene hora y ya pasó: registrar en progreso diario
@@ -230,7 +230,7 @@ Solo las que realmente usamos:
 
 | Skill | Uso | Ubicación |
 |-------|-----|-----------|
-| arya-reminders | Recordatorios cron | workspace/skills/ |
+| (recordatorios) | openclaw cron add directo | sin skill |
 | healthcheck | Auditoría del servidor | openclaw/skills/ |
 | gog | Google Workspace (calendario, email) | openclaw/skills/ |
 | weather | Clima para Medellín | openclaw/skills/ |

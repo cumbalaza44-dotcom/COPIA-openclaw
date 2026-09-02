@@ -4,7 +4,7 @@
 
 ```
 inbound_meta.chat_type
-├── direct → MAIN: SOUL → USER → vault-index.json → memory/today+yesterday (Live) → MEMORY.md → tasks.md
+├── direct → MAIN: SOUL → USER → vault-index.json → memory/today+yesterday (Live) → MEMORY.md → mision.md
 └── else   → LIGHT: skip MEMORY.md
 ```
 
@@ -14,17 +14,17 @@ inbound_meta.chat_type
 EVERY TURN
 ├── git pull --ff-only -q
 ├── read vault-index.json (hash + snapshot previo)
-├── read obsidian-vault/tasks.md (~40-60 tok)
-├── compute hash actual de tasks.md
-├── if hash != vault-index.json.tasksHash → TASKS CHANGED
+├── read obsidian-vault/mision.md (~40-60 tok)
+├── compute hash actual de mision.md
+├── if hash != vault-index.json.misionHash → TASKS CHANGED
 └── next
 
 TASKS ORIGIN
-├── obsidian-vault/tasks.md = SINGLE SOURCE OF TRUTH
-├── User writes tasks ONLY in obsidian-vault/tasks.md (iOS)
-├── I write tasks ONLY in obsidian-vault/tasks.md (server)
+├── obsidian-vault/mision.md = SINGLE SOURCE OF TRUTH
+├── User writes tasks ONLY in obsidian-vault/mision.md (iOS)
+├── I write tasks ONLY in obsidian-vault/mision.md (server)
 ├── I NEVER scan vault for [ ] / 📅 / grep
-└── tasks outside obsidian-vault/tasks.md = inexistentes para mí
+└── tasks outside obsidian-vault/mision.md = inexistentes para mí
 
 WRITE TO VAULT (SUBMODULE RULE — INFALIBLE)
 ├── obsidian-vault ES UN SUBMODULE con repo remoto propio
@@ -32,7 +32,7 @@ WRITE TO VAULT (SUBMODULE RULE — INFALIBLE)
 ├── STEP 2: cd .. && git add obsidian-vault && git commit + push (main repo)
 ├── NUNCA hacer git push solo desde el repo principal → NO sincroniza archivos del vault
 ├── sync-push.sh DEBE manejar ambos pushes en orden
-└── write-back: tarea marcada ✅ en tareas → actualizo nota original
+└── write-back: tarea marcada ✅ en mision → actualizo nota original
 
 ON-DEMAND READS
 ├── SIEMPRE usar `qmd search "query" --json -n 5` ANTES de grep/find
@@ -44,9 +44,9 @@ ON-DEMAND READS
 ## ⚡ Tareas Reactivas (Detección de Cambios)
 
 ```
-CADA TURNO, si hash de tasks.md cambió:
+CADA TURNO, si hash de mision.md cambió:
 
-1. COMPARAR con vault-index.json.tasksSnapshot
+1. COMPARAR con vault-index.json.misionSnapshot
    ├── Tareas nuevas (estaban en ⏳ y no estaban antes)
    ├── Tareas marcadas ✅ (cambiaron de ⏳/🔄 a ✅)
    ├── Tareas con hora nueva o modificada
@@ -67,8 +67,8 @@ CADA TURNO, si hash de tasks.md cambió:
        → resumen compacto: "N: 2 | ✅: 1 | ⏰: 1 | 🔴: 1"
 
 3. ACTUALIZAR vault-index.json
-   ├── tasksHash = nuevo hash
-   ├── tasksSnapshot = snapshot actualizado
+   ├── misionHash = nuevo hash
+   ├── misionSnapshot = snapshot actualizado
    └── lastChecked = timestamp
 
 REGLAS:
@@ -186,7 +186,7 @@ PER-TURN BASELINE (~22-25k tok)
 ├── system prompt (SOUL + AGENTS + IDENTITY + USER + TOOLS + MEMORY + workspace files)
 ├── tool schemas (~20 tools, ~8-10k tok)
 ├── historial 7 turnos (messages + tool_results + my replies)
-└── obsidian-vault/tasks.md (~40-60 tok) ← único payload variable
+└── obsidian-vault/mision.md (~40-60 tok) ← único payload variable
 
 EXEC OUTPUTS
 ├── truncar a 20 líneas max (head -20 / tail -20)
@@ -195,7 +195,7 @@ EXEC OUTPUTS
 └── logs largos → extract + head -20
 
 READS
-├── obsidian-vault/tasks.md → única lectura obligatoria por turno
+├── obsidian-vault/mision.md → única lectura obligatoria por turno
 ├── NO re-leer si ya está en el historial del turno
 ├── archivos grandes → leer solo secciones (offset + limit)
 └── on-demand reads → 0 tokens hasta que se necesiten
@@ -212,6 +212,13 @@ TURN LIMITS
 ├── operación compleja → dividir en turnos separados
 ├── conflictos git → 1 intento. Si falla → mostrar diff + preguntar
 └── si un turno se alarga → pasar al siguiente
+
+ANTI-BUCLE (evitar loops de ejecución)
+├── ANTES de ejecutar edit: read primero, verificar si ya está aplicado
+├── Si edit falla → read antes de reintentar (nunca asumir)
+├── Máximo 1 reintento por operación; si falla 2 veces → informar
+├── Si detecto patrón repetido (3+ tools idénticos) → PARAR inmediatamente
+└── Nunca spawn sub-agente si la tarea se resuelve con 1 edit directo
 
 ALERTA
 ├── si contexto > 100k tok → avisar: "Señor, contexto alto"

@@ -101,12 +101,10 @@ TURN LIMITS
 ├── conflictos git → 1 intento. Si falla → mostrar diff + preguntar
 └── si un turno se alarga → pasar al siguiente
 
-ANTI-BUCLE (evitar loops de ejecución)
-├── ANTES de ejecutar edit: read primero, verificar si ya está aplicado
-├── Si edit falla → read antes de reintentar (nunca asumir)
-├── Máximo 1 reintento por operación; si falla 2 veces → informar
-├── Si detecto patrón repetido (3+ tools idénticos) → PARAR inmediatamente
-└── Nunca spawn sub-agente si la tarea se resuelve con 1 edit directo
+ANTI-BUCLE → ver §Anti-Bucle en AGENTS.md (regla de comportamiento, no protocolo)
+├── Verifica antes de cada tool call si ya se ejecutó
+├── Máximo 1 reintento; si falla 2 veces → informar
+└── Si patrón repetido (2+ tools idénticos) → PARAR
 
 ALERTA
 ├── si contexto > 100k tok → avisar: "Señor, contexto alto"
@@ -119,12 +117,12 @@ Skills → leer `SKILL.md`. Notas locales → `TOOLS.md`.
 
 **Formateo:** Discord/WhatsApp → bullets, no tabulas. Links → `<url>` para suprimir embeds.
 
-## 🧩 Skills Activas
+## 🧩 Skills Activas (verificadas 2026-09-06)
 
 | Skill | Tipo | Uso |
 |-------|------|-----|
-| humanizer | Local | Eliminar patrones de escritura IA |
-| productivity-automation-kit | Local | Flujo de trabajo y recordatorios |
+| humanizer | Local ✓ | Eliminar patrones de escritura IA |
+| productivity-automation-kit | Local ✓ | Flujo de trabajo y recordatorios |
 | (recordatorios) | Directo | openclaw cron add — sin skill |
 
-**Bajo demanda** (catálogo global, no se inyectan): healthcheck, gog, weather, session-logs, clawhub, diagram-maker, meme-maker, skill-creator, spike, tmux, video-frames, python-debugpy, node-inspect-debugger, browser-automation, canvas, node-connect, taskflow. Se leen con `read SKILL.md` cuando se necesitan.
+**Bajo demanda** (no instaladas, se leen con `read SKILL.md` si se necesitan): healthcheck, gog, weather, session-logs, clawhub, diagram-maker, meme-maker, skill-creator, spike, tmux, video-frames, python-debugpy, node-inspect-debugger, browser-automation, canvas, node-connect, taskflow.

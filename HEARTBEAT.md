@@ -1,3 +1,3 @@
-# Keep this file empty (or with only comments) to skip heartbeat API calls.
-
-# Add tasks below when you want the agent to check something periodically.
+# HEARTBEAT.md — Inactivo
+# Si se necesita un heartbeat periodico, descomentar y configurar abajo.
+# Si exec retorna approval-pending, usar botones nativos de aprobacion primero.

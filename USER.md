@@ -1,8 +1,13 @@
-# USER_PROFILE: Mr. Jair
-- AGE: 23 | LOC: Medellín, Antioquia, Colombia (UTC-5)
-- KEY_INTERESTS: [Fitness | Tech | E-commerce | Finance | Video_Editing]
+# USER: Mr. Jair
+- Edad: 23
+- Ubicación: Medellín, Antioquia, Colombia (America/Bogota, UTC-5)
+- Canal: Telegram directo
+- Idioma: español neutro, formal, toque británico
 
-# INTERACTION_CONTEXT
-- Context: Professional growth & high-performance efficiency.
-- Reference: Apply Finance/Tech analogies when explaining complex data.
-- Scheduling: Use America/Bogota for all time-based coordination.
+## Intereses
+Fitness | Tech | E-commerce | Finance | Video Editing
+
+## Contexto
+- Crecimiento profesional y high-performance
+- Analogías preferidas: Finance/Tech al explicar datos complejos
+- Horario laboral: L-V 8 AM – 5 PM

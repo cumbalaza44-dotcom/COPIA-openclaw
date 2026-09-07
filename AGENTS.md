@@ -44,40 +44,44 @@ ON-DEMAND READS
 ## ⚡ Tareas Reactivas (Detección de Cambios)
 
 ```
-CADA TURNO, si hash de mision.md cambió:
+FORMATO HOY (hibrido nativo Obsidian):
+├── - [ ] Tarea — HH:MM  → pendiente, con hora opcional
+├── - [x] Tarea — HH:MM  → completada
+└── Sin hora → sin recordatorio, no rompe nada
 
-1. COMPARAR con vault-index.json.misionSnapshot
-   ├── Tareas nuevas (estaban en ⏳ y no estaban antes)
-   ├── Tareas marcadas ✅ (cambiaron de ⏳/🔄 a ✅)
-   ├── Tareas con hora nueva o modificada
-   └── Prioridades cambiadas (🔴🟡🟢)
+Deteccion: grep "^- \\[[ x]\\]" mision.md (solo seccion HOY)
 
-2. ACTUAR según lo detectado:
-   ├── Tarea nueva CON hora ⏰ HH:MM
+CADA TURNO, si hash de mision.md cambio:
+
+1. COMPARAR lineas HOY con vault-index.json.misionSnapshot
+   ├── Linea nueva "- [ ] ..."  → tarea nueva
+   ├── "- [ ]" → "- [x]"       → completada
+   └── Texto con "— HH:MM" nuevo o cambiado → hora nueva/modificada
+
+2. ACTUAR segun lo detectado:
+   ├── Tarea nueva CON "— HH:MM"
    │   → crear recordatorio (openclaw cron add) AL INSTANTE
-   │   → notificar: "Detecté nueva tarea: [nombre] a las HH:MM"
-   ├── Tarea marcada ✅
-   │   → si tiene hora y ya pasó: registrar en progreso diario
-   │   → si es del HOY: actualizar conteo de completadas
+   │   → notificar: "Detecte nueva tarea: [nombre] a las HH:MM"
+   ├── "- [ ]" → "- [x]"
+   │   → si tenia hora y ya paso: registrar en progreso diario
+   │   → actualizar conteo de completadas del dia
    ├── Tarea nueva SIN hora
-   │   → reverse prompting: "¿A qué hora? ¿Lo desgloso?"
-   ├── Prioridad subió (🟡→🔴 o 🟢→🟡)
-   │   → reprocesar MIT del día, sugerir reorden
-   └── Múltiples cambios
-       → resumen compacto: "N: 2 | ✅: 1 | ⏰: 1 | 🔴: 1"
+   │   → reverse prompting: "¿A que hora? ¿Lo desgloso?"
+   └── Multiples cambios
+       → resumen compacto: "N: 2 | ✅: 1 | ⏰: 1"
 
 3. ACTUALIZAR vault-index.json
-   ├── misionHash = nuevo hash
-   ├── misionSnapshot = snapshot actualizado
+   ├── misionHash = nuevo hash (md5sum)
+   ├── misionSnapshot = lineas HOY tal cual (para diff por linea)
    └── lastChecked = timestamp
 
 REGLAS:
-├── Hash: md5sum o sha1sum (rápido, sin node)
-├── Snapshot: solo HOY y secciones activas, no todo el archivo
-├── NO notificar si el cambio lo hizo H.E.L.E.N. (misma sesión)
-├── NO duplicar notificaciones (si ya informé en este turno, no repetir)
-├── Si ya ejecuté exec/read en este turno y tengo el resultado → NO repetir
-└── Tono: "Señor, detecté que agregó..." / "Vi que marcó..."
+├── Hash: md5sum (rapido, sin node)
+├── Snapshot: solo lineas "- [ ]/- [x]" de HOY, no todo el archivo
+├── NO notificar si el cambio lo hizo H.E.L.E.N. (misma sesion)
+├── NO duplicar notificaciones (si ya informe en este turno, no repetir)
+├── Si ya ejecute exec/read en este turno y tengo el resultado → NO repetir
+└── Tono: "Senor, detecte que agrego..." / "Vi que marco..."
 ```
 
 ## 🔄 Reverse Prompting

@@ -1,11 +1,5 @@
 {
-  "misionHash": "982715bc9601dfca7aafa343286cc05e",
-  "misionSnapshot": "Viernes 04/09 — 0/7 | Sábado 05/09 13:00 Balance de vida ⬜ + ITM inscripción ⬜",
-  "lastChecked": 1788572130.0248525,
-  "modofantasma": {
-    "version": "1.0",
-    "launched": "2026-07-07",
-    "cronJob": "865f12b4",
-    "schedule": "5:05 AM diario"
-  }
+  "misionHash": "15843557a40e76661c5e08364f801899",
+  "misionSnapshot": "- [ ] 🎓 ITM Mecatrónica — confirmar registro completado — 07:00|- [ ] 📚 Lectura diaria 20min — 06:00|- [ ] 🏋️ Gym + 💊 Creatina — 06:30|- [ ] 🤖 Ghost Trader — prototipo funcional (test MT5) — 19:00|- [ ] 🔧 Prototipo X — sensor ultrasónico + alerta (bench) — 19:30|- [ ] 📢 Meta Ads — definir nicho específico — 20:00|- [ ] 🏠 Comprar aceite de coco + Lavar prendas — 17:00",
+  "lastChecked": 1788751299
 }

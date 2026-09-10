@@ -40,13 +40,13 @@ Alternar con `/model alias` en el chat.
 | Alias | Modelo | Contexto | Costo in/out | Reasoning | Notas |
 |-------|--------|----------|-------------|-----------|-------|
 | `mimo` | `xiaomi/mimo-v2.5` | 1050k | $0.14 / $0.28 | No | Default. Multimodal (text+image+audio+video) |
-| `spark` | `meta/muse-spark-1.2-contributor` | 1048k | $0.10 / $0.20 | Sí | Multimodal (text+image+audio+video) |
+| `spark` | `meta/muse-spark-1.3-contributor` | 1048k | $0.10 / $0.20 | Sí | Multimodal (text+image+audio+video) — **PRINCIPAL** |
 | `dsv4` | `deepseek/deepseek-v4-flash-0731` | 1310k | $0.07 / $0.18 | No | Texto puro, contexto masivo |
 
 ### Cambiar modelo
-- `/model spark` → Muse Spark (reasoning, multimodal)
+- `/model spark` → Muse Spark **1.3 Contributor** (reasoning, multimodal) — **PRINCIPAL del sistema**
 - `/model dsv4` → DeepSeek V4 Flash (ultra barato, 1.3M contexto)
-- `/model mimo` → MiMo v2.5 (default)
+- `/model mimo` → MiMo v2.5
 
 Cron jobs y sub-agentes heredan el modelo activo del agente principal.
 

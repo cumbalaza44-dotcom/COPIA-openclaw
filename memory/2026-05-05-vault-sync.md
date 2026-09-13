@@ -80,7 +80,9 @@ assistant: 🦾 **Estructura montada.**
 
 ### Lo que cambia de ahora en adelante:
 
-✅ Antes de leer o escribir en el vault, corro **`vault-sync.sh`** automáticamente → pull + índice fresco  
+⚠️ OBSOLETO 2026-09-13 — `vault-sync.sh` retirado a `legacy/vault-sync.sh.disabled` (H1 auditoría 12/09: destruía schema `{misionHash,misionSnapshot,lastChecked}` de `vault-index.json`). NO ejecutar. Sync real: agente + `obsidian-vault/sync-push.sh`.
+
+✅ ~~Antes de leer o escribir en el vault, corro **`vault-sync.sh`** automáticamente → pull + índice fresco~~  
 ✅ Después de escribir, auto-commit + push  
 ✅ El `_VAULT-INDEX.md` vive **dentro del vault** — lo ve desde Obsidian móvil como cualquier nota  
 ✅ Si se me traba el árbol, el JSON me da la ruta exacta al toque

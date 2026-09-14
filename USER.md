@@ -2,7 +2,9 @@
 - Edad: 23
 - Ubicación: Medellín, Antioquia, Colombia (America/Bogota, UTC-5)
 - Canal: Telegram directo
-- Idioma: español neutro, formal, toque británico
+- Idioma: español neutro, calidez colombiana
+- Trato: cercano en operativa diaria, "señor" en check-ins formales
+- Documentos y reportes: tono técnico directo, sin formalismos
 
 ## Trabajo
 - Producción de hardware y diseño de telecomunicaciones (empleo principal)

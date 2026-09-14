@@ -21,6 +21,19 @@
 - Si el header de fecha ya existe, append bullets.
 - Si MEMORY.md está vacío → leer últimos 3-5 archivos de `memory/` y compilar resumen.
 
+## 🚫 memory_search — FUERA DE USO (2026-09-13)
+
+Verificado por 3 rutas, cero arrastre:
+- `openai` (default): sin API key → `missing-provider-auth`.
+- `gemini`: cuota excedida → `429 RESOURCE_EXHAUSTED`.
+- `openai-compatible` → OpenRouter: índice reconstruye por CLI pero el tool en runtime ignora el config y sigue pidiendo `openai`.
+
+**Reemplazo (recall sin dependencia rota):**
+- `qmd search "query" --json -n 5` sobre colección `memory` (cron update diario 04:30) → recall determinista.
+- Skill `session-logs` (`jq` sobre session logs) → recall entre sesiones.
+- `memory_get` sigue vigente para lectura directa de `MEMORY.md` / `memory/*.md`.
+- Regla: antes de responder sobre trabajo previo → `qmd search` en `memory` + `session-logs` si hace falta. NO usar `memory_search`.
+
 ## 📝 Regla de oro
 
 **Text > Brain.** Si algo importa → archivo. "Mental notes" mueren al cerrar sesión.

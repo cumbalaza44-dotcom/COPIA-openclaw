@@ -19,6 +19,12 @@ EVERY TURN
 ├── if hash != vault-index.json.misionHash → TASKS CHANGED
 └── next
 
+MEMORY WRITE (P1 — decisión durable en turno main)
+├── Si el turno produjo decisión/preferencia/dato durable → append a memory/YYYY-MM-DD.md bajo ## Live
+├── Formato: - bullet corto (1 línea, causa→efecto si aplica)
+├── Máximo 10 bullets/día en ## Live (el compactador mecánico recorta a 40)
+└── NO escribir si el turno fue solo lectura o charla sin dato durable
+
 TASKS ORIGIN
 ├── obsidian-vault/mision.md = SINGLE SOURCE OF TRUTH
 ├── User writes tasks ONLY in obsidian-vault/mision.md (iOS)

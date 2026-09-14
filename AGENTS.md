@@ -49,12 +49,12 @@ FORMATO HOY (hibrido nativo Obsidian):
 ├── - [x] Tarea — HH:MM  → completada
 └── Sin hora → sin recordatorio, no rompe nada
 
-Deteccion: grep "^- \\[[ x]\\]" mision.md (solo seccion HOY)
+Deteccion: parseo por seccion (solo ## 🔥 HOY y ## 📅 MAÑANA)
 
 CADA TURNO, si hash de mision.md cambio:
 
-1. COMPARAR lineas HOY con vault-index.json.misionSnapshot
-   ├── Linea nueva "- [ ] ..."  → tarea nueva
+1. COMPARAR lineas HOY+MAÑANA con vault-index.json.misionSnapshot (array JSON)
+   ├── Elemento nuevo "[HOY]/[MAÑANA] - [ ] ..."  → tarea nueva
    ├── "- [ ]" → "- [x]"       → completada
    └── Texto con "— HH:MM" nuevo o cambiado → hora nueva/modificada
 
@@ -72,12 +72,12 @@ CADA TURNO, si hash de mision.md cambio:
 
 3. ACTUALIZAR vault-index.json
    ├── misionHash = nuevo hash (md5sum)
-   ├── misionSnapshot = lineas HOY tal cual (para diff por linea)
+   ├── misionSnapshot = array JSON ["[HOY] ...", "[MAÑANA] ..."] (solo HOY+MAÑANA)
    └── lastChecked = timestamp
 
 REGLAS:
 ├── Hash: md5sum (rapido, sin node)
-├── Snapshot: solo lineas "- [ ]/- [x]" de HOY, no todo el archivo
+├── Snapshot: array JSON, solo secciones HOY+MAÑANA. PROYECTOS/HABITOS/HOGAR fuera (no disparan)
 ├── NO notificar si el cambio lo hizo H.E.L.E.N. (misma sesion)
 ├── NO duplicar notificaciones (si ya informe en este turno, no repetir)
 ├── Si ya ejecute exec/read en este turno y tengo el resultado → NO repetir

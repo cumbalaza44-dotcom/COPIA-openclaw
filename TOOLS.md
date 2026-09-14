@@ -5,7 +5,7 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 ## QMD — Motor de Búsqueda del Vault
 
 **Instalado:** `@tobilu/qmd` v2.5.3
-**Modelo embedding:** `embeddinggemma-300M-Q8_0.gguf` (local, CPU)
+**Modo:** BM25 texto (sin embeddings — suprimido 2026-09-13: SIGKILL por memoria, patrón de uso determinista no lo requiere)
 **Índice:** `/root/.cache/qmd/index.sqlite`
 
 ### Colecciones
@@ -16,13 +16,11 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ### Comandos clave
 ```bash
-qmd search "query" --json -n 5    # Búsqueda rápida (BM25)
-qmd vsearch "query" --json -n 5   # Semántica (embeddings)
-qmd query "query" --json -n 5     # Híbrido (BM25 + vector + reranking)
+qmd search "query" --json -n 5    # Búsqueda texto (BM25) — método principal
 qmd get "qmd://vault/path"        # Retrieve documento específico
 qmd ls vault                      # Listar colección
 qmd status                        # Status del índice
-qmd update && qmd embed           # Re-indexar + re-generar embeddings
+qmd update                        # Re-indexar (cron diario 04:30, comando silencioso)
 ```
 
 ### Regla de uso

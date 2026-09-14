@@ -4,7 +4,7 @@
 - Lectura diaria: contenido fresco y variado, NO repetir temas ya leídos
 
 ## Infraestructura
-- QMD v2.5.3 instalado — índice embeddings local
+- QMD v2.5.3 instalado — índice BM25 local (embeddings suprimidos 2026-09-13)
 - Vault Obsidian como submodule con push order dual
 - Skills instaladas: humanizer, productivity-automation-kit
 

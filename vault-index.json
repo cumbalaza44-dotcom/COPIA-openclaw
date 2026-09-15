@@ -1,5 +1,5 @@
 {
-  "misionHash": "8d5aa458289606f621b057f4d511fb7a",
+  "misionHash": "8b76e45dba76b0ca3a04397012224c13",
   "misionSnapshot": [
     "[HOY] - [ ] 🎓 ITM Mecatrónica — registro + confirmar — 06:00",
     "[HOY] - [ ] 🔍 Consultar pregrados — 07:00",
@@ -8,8 +8,9 @@
     "[HOY] - [ ] 📚 Revisar y ajustar cron lecturas diarias",
     "[MAÑANA] - [ ] 📢 Meta Ads — definir nicho específico (noche)",
     "[MAÑANA] - [ ] 🏋️ Gym — retomar (5:30 AM)",
+    "[MAÑANA] - [ ] 📏 Medir progreso gym — peso + medidas + fotos (con gym 5:30 AM)",
     "[MAÑANA] - [ ] 💊 Creatina noche",
-    "[MAÑANA] - [ ] 📚 Lectura diaria"
+    "[MAÑANA] - [ ] 📚 Lectura diaria ⏸️ pausada — fuera de uso"
   ],
-  "lastChecked": 1789351125
+  "lastChecked": 1789434709
 }

@@ -1,7 +1,7 @@
 {
-  "misionHash": "19c043007c8392ba38495705c41dc7de",
+  "misionHash": "11243dac4553d8620e703ff9685a8ac4",
   "misionSnapshot": [
-    "[HOY] - [ ] 🎓 ITM Mecatrónica — registro + confirmar — 06:00",
+    "[HOY] - [x] 🎓 ITM Mecatrónica — registro + confirmar — 06:00 ✅ (15/09)",
     "[HOY] - [ ] 🔍 Consultar pregrados — 07:00",
     "[HOY] - [ ] 🧹 Organizar habitación *(arrastre Dom 13)*",
     "[HOY] - [ ] 🖥️ Ghost Trader — prototipo funcional (noche, foco principal)",
@@ -13,5 +13,5 @@
     "[MAÑANA] - [ ] 💊 Creatina noche",
     "[MAÑANA] - [ ] 📚 Lectura diaria ⏸️ pausada — fuera de uso"
   ],
-  "lastChecked": 1789434757
+  "lastChecked": 1789438500
 }

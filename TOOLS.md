@@ -37,8 +37,8 @@ Alternar con `/model alias` en el chat.
 
 | Alias | Modelo | Contexto | Costo in/out | Reasoning | Notas |
 |-------|--------|----------|-------------|-----------|-------|
-| `mimo` | `xiaomi/mimo-v2.5` | 1050k | $0.14 / $0.28 | No | Default. Multimodal (text+image+audio+video) |
-| `spark` | `meta/muse-spark-1.3-contributor` | 1048k | $0.10 / $0.20 | Sí | Multimodal (text+image+audio+video) — **PRINCIPAL** |
+| `mimo` | `xiaomi/mimo-v2.5` | 1050k | $0.14 / $0.28 | No | Multimodal (text+image+audio+video) |
+| `spark` | `meta/muse-spark-1.3-contributor` | 1048k | $0.10 / $0.20 | Sí | Multimodal (text+image+audio+video) — **PRINCIPAL (Default)** |
 | `dsv4` | `deepseek/deepseek-v4-flash-0731` | 1310k | $0.07 / $0.18 | No | Texto puro, contexto masivo |
 
 ### Cambiar modelo

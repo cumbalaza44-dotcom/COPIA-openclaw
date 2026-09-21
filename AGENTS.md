@@ -1,4 +1,5 @@
 # AGENTS.md
+<!-- FREEZE 21–27 Sep: no editar salvo fix crítico — test cache-hit. Propuestas 1-4 aplicadas. -->
 
 ## 🚀 Startup
 
@@ -8,15 +9,14 @@ inbound_meta.chat_type
 └── else   → LIGHT: skip MEMORY.md
 ```
 
-## 🔄 Vault Sync (main session only)
+## 🔄 Vault Sync (main session only) — CACHE MODE 21–27 Sep
 
 ```
-EVERY TURN
-├── git pull --ff-only -q
-├── read vault-index.json (hash + snapshot previo)
-├── read obsidian-vault/mision.md (~40-60 tok)
-├── compute hash actual de mision.md
-├── if hash != vault-index.json.misionHash → TASKS CHANGED
+EVERY TURN (hash-first, silent)
+├── exec: git pull --ff-only -q + md5sum mision.md (1 call, output NO va al historial salvo cambio)
+├── comparar hash vs vault-index.json.misionHash (leer index SOLO si hash difiere)
+├── si hash igual → SKIP lecturas snapshot/mision, next (cero outputs distintos)
+├── si hash difiere → leer snapshot + mision HOY/MAÑANA, aplicar detección reactiva
 └── next
 
 MEMORY WRITE (P1 — decisión durable en turno main)

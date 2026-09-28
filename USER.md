@@ -7,11 +7,16 @@
 - Documentos y reportes: tono técnico directo, sin formalismos
 
 ## Trabajo
-- Producción de hardware y diseño de telecomunicaciones (empleo principal)
+- Técnico de sistemas / hardware en datacenter (empleo principal, desde Sep 2026)
 - Emprendimientos: Ghost Trader + Meta Ads / E-commerce
 
 ## Objetivo principal
 - Generar 300M COP en un año
+
+## Carrera datacenter (desde Sep 2026)
+- Rol: técnico de sistemas / hardware — racks, servidores, cableado, swapping, monitoreo físico
+- Objetivo: dominar el stack físico y escalar a redes/sistemas o SRE
+- Misión actual: llenarse de conocimiento sobre los equipos del datacenter
 
 ## Comunicación
 - Proactiva, puntual, con contexto de motivo y propósito

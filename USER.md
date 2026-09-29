@@ -14,9 +14,11 @@
 - Generar 300M COP en un año
 
 ## Carrera datacenter (desde Sep 2026)
-- Rol: técnico de sistemas / hardware — racks, servidores, cableado, swapping, monitoreo físico
-- Objetivo: dominar el stack físico y escalar a redes/sistemas o SRE
-- Misión actual: llenarse de conocimiento sobre los equipos del datacenter
+- Rol: Técnico Especialista Data Center Hardware — datacenters de IA
+- Alcance: disponibilidad y operatividad de hardware crítico (servidores, GPUs, red, cómputo alto rendimiento)
+- Funciones: despliegue, preventivo/correctivo, diagnóstico, reemplazo FRUs (fuentes, fans, discos, RAM, NICs, GPUs, DPUs), RMA, commissioning, inventarios, DCIM
+- Coordinación: Network Operations, Physical Connectivity, Datacenter Operations
+- Misión actual: llenarse de conocimiento sobre los equipos
 
 ## Comunicación
 - Proactiva, puntual, con contexto de motivo y propósito

@@ -1,14 +1,14 @@
 {
-  "lastChecked": 1790469600,
-  "misionHash": "cbdebf8818e126e7e744c36615923e10",
+  "lastChecked": 1790817400,
+  "misionHash": "699189f4796ee5bb67284d87292ecf8f",
   "misionSnapshot": [
-    "[HOY Lun 28] - [ ] Gym + Lectura",
-    "[HOY Lun 28] - [ ] DataCenter S1-Lun rack/PDU/UPS (foco principal)",
-    "[HOY Lun 28] - [ ] Ghost Trader segundo bloque",
-    "[HOY Lun 28] - [ ] Pregrados 07:00 (arrastre)",
-    "[HOY Lun 28] - [ ] Creatina noche",
-    "[MANANA Mar 29] - [ ] Gym",
-    "[MANANA Mar 29] - [ ] DataCenter S1-Mar clima+airflow",
-    "[MANANA Mar 29] - [ ] Lectura + Creatina"
+    "[HOY Mie 30] - [ ] Lectura diaria",
+    "[HOY Mie 30] - [ ] DC S1-Mie cableado cobre/fibra (foco noche)",
+    "[HOY Mie 30] - [ ] DC arrastre S1-Mar clima+airflow",
+    "[HOY Mie 30] - [ ] Pregrados 07:00 (arrastre)",
+    "[HOY Mie 30] - [ ] Creatina noche",
+    "[MANANA Jue 01] - [ ] Lectura diaria",
+    "[MANANA Jue 01] - [ ] DC S1-Jue ESD+seguridad+SOP/MOP",
+    "[MANANA Jue 01] - [ ] Creatina noche"
   ]
 }

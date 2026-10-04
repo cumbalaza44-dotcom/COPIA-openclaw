@@ -1,14 +1,15 @@
 {
-  "lastChecked": 1790817400,
-  "misionHash": "699189f4796ee5bb67284d87292ecf8f",
+  "lastChecked": 1791079000,
+  "misionHash": "b153de6129baf33906ef680d7cedb24e",
   "misionSnapshot": [
-    "[HOY Mie 30] - [ ] Lectura diaria",
-    "[HOY Mie 30] - [ ] DC S1-Mie cableado cobre/fibra (foco noche)",
-    "[HOY Mie 30] - [ ] DC arrastre S1-Mar clima+airflow",
-    "[HOY Mie 30] - [ ] Pregrados 07:00 (arrastre)",
-    "[HOY Mie 30] - [ ] Creatina noche",
-    "[MANANA Jue 01] - [ ] Lectura diaria",
-    "[MANANA Jue 01] - [ ] DC S1-Jue ESD+seguridad+SOP/MOP",
-    "[MANANA Jue 01] - [ ] Creatina noche"
+    "[HOY Sab 03] - [ ] Lectura diaria",
+    "[HOY Sab 03] - [ ] SSH basico (manana, foco alto)",
+    "[HOY Sab 03] - [ ] Descanso activo",
+    "[HOY Sab 03] - [ ] DC simulacro PDU 22 kW (noche, foco principal)",
+    "[HOY Sab 03] - [ ] Lavar prendas",
+    "[HOY Sab 03] - [ ] Creatina noche",
+    "[MANANA Dom 04] - [ ] Lectura diaria",
+    "[MANANA Dom 04] - [ ] Descanso + Planificacion semana 2 (FRUs)",
+    "[MANANA Dom 04] - [ ] Creatina noche"
   ]
 }

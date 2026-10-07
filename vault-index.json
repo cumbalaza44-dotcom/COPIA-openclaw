@@ -1,15 +1,13 @@
 {
-  "lastChecked": 1791079000,
-  "misionHash": "b153de6129baf33906ef680d7cedb24e",
+  "lastChecked": 1791307907,
+  "misionHash": "825d4fc8dce393b9894e505c013bc66f",
   "misionSnapshot": [
-    "[HOY Sab 03] - [ ] Lectura diaria",
-    "[HOY Sab 03] - [ ] SSH basico (manana, foco alto)",
-    "[HOY Sab 03] - [ ] Descanso activo",
-    "[HOY Sab 03] - [ ] DC simulacro PDU 22 kW (noche, foco principal)",
-    "[HOY Sab 03] - [ ] Lavar prendas",
-    "[HOY Sab 03] - [ ] Creatina noche",
-    "[MANANA Dom 04] - [ ] Lectura diaria",
-    "[MANANA Dom 04] - [ ] Descanso + Planificacion semana 2 (FRUs)",
-    "[MANANA Dom 04] - [ ] Creatina noche"
+    "[HOY Lun 05] - [ ] Lectura diaria",
+    "[HOY Lun 05] - [ ] DC S2-Lun: FRUs (bloque noche 6:30-9:30)",
+    "[HOY Lun 05] - [ ] Ghost Trader - validar prototipo funcional (foco principal noche)",
+    "[HOY Lun 05] - [ ] Creatina noche",
+    "[MANANA Mar 06] - [ ] Lectura diaria",
+    "[MANANA Mar 06] - [ ] Meta Ads - definir nicho especifico (prioridad semanal)",
+    "[MANANA Mar 06] - [ ] Creatina noche"
   ]
 }

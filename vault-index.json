@@ -1,13 +1,15 @@
 {
-  "lastChecked": 1791307907,
-  "misionHash": "825d4fc8dce393b9894e505c013bc66f",
+  "lastChecked": 1791848000,
+  "misionHash": "cc801115e156c50d4ca9f730eda8a446",
   "misionSnapshot": [
-    "[HOY Lun 05] - [ ] Lectura diaria",
-    "[HOY Lun 05] - [ ] DC S2-Lun: FRUs (bloque noche 6:30-9:30)",
-    "[HOY Lun 05] - [ ] Ghost Trader - validar prototipo funcional (foco principal noche)",
-    "[HOY Lun 05] - [ ] Creatina noche",
-    "[MANANA Mar 06] - [ ] Lectura diaria",
-    "[MANANA Mar 06] - [ ] Meta Ads - definir nicho especifico (prioridad semanal)",
-    "[MANANA Mar 06] - [ ] Creatina noche"
+    "[HOY Lun 12] - [ ] Lectura diaria",
+    "[HOY Lun 12] - [ ] DC SYS-422GS ficha + FRUs (foco noche)",
+    "[HOY Lun 12] - [ ] DC XLSX hoja SYS-422GS",
+    "[HOY Lun 12] - [ ] Pago 21:07 recordatorio",
+    "[HOY Lun 12] - [ ] Creatina noche",
+    "[MANANA Mar 13] - [ ] Lectura diaria",
+    "[MANANA Mar 13] - [ ] DC XLSX SYS-122H + ASG-1115S",
+    "[MANANA Mar 13] - [ ] Confirmar gym",
+    "[MANANA Mar 13] - [ ] Creatina noche"
   ]
 }

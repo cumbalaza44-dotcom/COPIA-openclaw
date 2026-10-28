@@ -1,15 +1,14 @@
 {
-  "lastChecked": 1791944500,
-  "misionHash": "f209c5b7de6df71aed4d46438b030683",
+  "lastChecked": 1793105774,
+  "misionHash": "bea8d31b2068224e81afa11278372b71",
   "misionSnapshot": [
-    "[HOY Lun 12] - [ ] Lectura diaria",
-    "[HOY Lun 12] - [ ] DC SYS-422GS ficha + FRUs (foco noche)",
-    "[HOY Lun 12] - [ ] DC XLSX hoja SYS-422GS",
-    "[HOY Lun 12] - [ ] Pago 21:07 recordatorio",
-    "[HOY Lun 12] - [ ] Creatina noche",
-    "[MANANA Mar 13] - [ ] Lectura diaria",
-    "[MANANA Mar 13] - [ ] DC XLSX SYS-122H + ASG-1115S",
-    "[MANANA Mar 13] - [ ] Confirmar gym",
-    "[MANANA Mar 13] - [ ] Creatina noche"
+    "[HOY Lun 26] - [ ] Lectura diaria",
+    "[HOY Lun 26] - [ ] Pedir PDFs faltantes DC (arrastre)",
+    "[HOY Lun 26] - [ ] DC Fase 1 (noche)",
+    "[HOY Lun 26] - [ ] Creatina noche",
+    "[MANANA Mar 27] - [ ] Lectura diaria",
+    "[MANANA Mar 27] - [ ] Meta Ads definir nicho (prioridad semanal)",
+    "[MANANA Mar 27] - [ ] DC Fase 1 (noche)",
+    "[MANANA Mar 27] - [ ] Creatina noche"
   ]
 }

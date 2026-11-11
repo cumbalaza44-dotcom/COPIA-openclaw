@@ -1,1 +1,18 @@
-{"lastChecked":1794187200,"misionHash":"c8ee78fc43c089554a5a185907923254","misionSnapshot":["[HOY Lun 9] - [ ] Lectura diaria","[HOY Lun 9] - [ ] Creatina noche (pausada)","[HOY Lun 9] - [ ] DCIM + inventarios + documentacion (prioridad 1)","[HOY Lun 9] - [ ] Incidentes + coordinacion (bloque noche)","[HOY Lun 9] - [>] DC S6 Incidentes (no hecha 8/11)","[HOY Lun 9] - [>] Meta Ads nicho (no hecha 8/11)","[HOY Lun 9] - [>] Prototipo X sensor (no hecha 8/11)","[HOY Lun 9] - [>] Gestion internet (no hecha 8/11)","[MANANA Mar 10] - [ ] Lectura diaria","[MANANA Mar 10] - [ ] SOP/MOP + ventanas + seguridad (prioridad 2)"]}
+{
+  "lastChecked": 1794187200,
+  "misionHash": "7238ad07895e578f04620fbfede8ded7",
+  "misionSnapshot": [
+    "[HOY Mie 11] - [ ] Lectura diaria",
+    "[HOY Mie 11] - [ ] Creatina noche (pausada)",
+    "[HOY Mie 11] - [ ] Gestion incidentes+tickets + CLI intermedio (prioridad 3)",
+    "[HOY Mie 11] - [ ] Incidentes + coordinacion (bloque noche)",
+    "[HOY Mie 11] - [>] SOP/MOP (no hecha 10/11)",
+    "[HOY Mie 11] - [>] DCIM (no hecha 10/11)",
+    "[HOY Mie 11] - [>] S6 Incidentes (no hecha 10/11)",
+    "[HOY Mie 11] - [>] Meta Ads nicho (no hecha 10/11)",
+    "[HOY Mie 11] - [>] Prototipo X sensor (no hecha 10/11)",
+    "[HOY Mie 11] - [>] Gestion internet (no hecha 10/11)",
+    "[MANANA Jue 12] - [ ] Lectura diaria",
+    "[MANANA Jue 12] - [ ] RMA + commissioning (prioridad 4)"
+  ]
+}

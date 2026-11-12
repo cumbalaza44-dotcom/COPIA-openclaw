@@ -105,3 +105,25 @@ sensors | head; smartctl -a /dev/sda | grep -i health; ethtool eth0 | grep -E "S
 
 ---
 Tip: si `link down` + `ethtool -m` con RX bajo → físico (fibra/transceiver). Si RX ok + errores CRC → cable/velocidad/duplex.
+
+## 10. Dell Z9664F-ON (OS10) + S4048-ON (OS9/OS10)
+```bash
+# --- OS10 (Z9664F-ON, S4048-ON con OS10) ---
+show interface status              # estado UP/DOWN todos los puertos
+show interface ethernet 1/1/1     # detalle un puerto
+show lldp neighbors               # qué hay conectado puerto por puerto
+show mac address-table
+show interface transceiver         # ópticos: TX/RX/temp (equivale a ethtool -m)
+show interface counters errors     # CRC/drops
+show version; show system; show inventory
+show running-configuration
+configure terminal → interface ethernet 1/1/1 → shutdown / no shutdown
+
+# --- OS9 / FTOS (S4048-ON clásico) ---
+show interfaces status
+show interfaces transceiver
+show lldp neighbors
+show mac-address-table
+show version; show system brief; show inventory
+```
+> Z9664F-ON = 64x400G spine (OS10). S4048-ON = 48x10G + 6x40G ToR (OS9 u OS10 según versión).

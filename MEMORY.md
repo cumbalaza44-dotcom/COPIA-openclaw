@@ -1,5 +1,8 @@
 # MEMORY.md
 
+## Lecturas
+- Modelo lecturas largas: inclusionai/ling-3.1-flash (API directa, reasoning low)
+
 ## Preferencias
 - Lectura diaria: contenido fresco y variado, NO repetir temas ya leídos
 

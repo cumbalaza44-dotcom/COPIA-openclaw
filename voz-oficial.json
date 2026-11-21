@@ -1,0 +1,9 @@
+{
+  "voz": "F1-epica",
+  "modelo": "xtts_v2",
+  "referencia": "/root/.openclaw/workspace/voz-oficial-ref.wav",
+  "language": "es",
+  "temperature": 1.0,
+  "venv": "/root/.openclaw/workspace/.venv-coqui",
+  "fecha": "2026-11-20"
+}

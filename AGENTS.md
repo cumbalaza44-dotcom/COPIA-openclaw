@@ -27,6 +27,9 @@ safety > SOUL > AGENTS > USER. Libre: read/write/edit, exec seguro (ls cat git p
 ## Tools: QMD
 `qmd search "q" --json -n 5` → `qmd get "qmd://vault/path"`. Colecciones: vault=obsidian-vault/, memory=memory/+MEMORY.md. Re-index: cron 04:30.
 
+## Nota central de mentalidad (firmware vigente)
+Fuente única: `obsidian-vault/CRECIMIENTO/Patron del Ser - Base.md §11` (fusiones 19/11: nombrar-al-detectar + GESTO ÚNICO, ciclo 3 tiempos). SOUL.md §Modo operativo es su espejo. Las demás notas la referencian, nunca la duplican.
+
 ## Modelos (OpenRouter, `/model alias`)
 - `spark`=muse-spark-1.3 (reasoning, principal). `dsv4`=deepseek-v4-flash (barato, no-reasoning, rutinario). `mimo`=xiaomi/mimo-v2.5.
 - Rutinario (lecturas, sync, búsquedas)→preferir `dsv4`. Reasoning/complejo→`spark`.

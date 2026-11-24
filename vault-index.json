@@ -1,18 +1,18 @@
 {
-  "lastChecked": 1763765780,
-  "misionHash": "cfbeff9f23e88bb5a1989d12b88dfc64",
+  "lastChecked": 1763947500,
+  "misionHash": "2a2820159efd455eda7b003dfc2a4e9a",
   "misionSnapshot": [
-    "[HOY Mie 11] - [ ] Lectura diaria",
-    "[HOY Mie 11] - [ ] Creatina noche (pausada)",
-    "[HOY Mie 11] - [ ] Gestion incidentes+tickets + CLI intermedio (prioridad 3)",
-    "[HOY Mie 11] - [ ] Incidentes + coordinacion (bloque noche)",
-    "[HOY Mie 11] - [>] SOP/MOP (no hecha 10/11)",
-    "[HOY Mie 11] - [>] DCIM (no hecha 10/11)",
-    "[HOY Mie 11] - [>] S6 Incidentes (no hecha 10/11)",
-    "[HOY Mie 11] - [>] Meta Ads nicho (no hecha 10/11)",
-    "[HOY Mie 11] - [>] Prototipo X sensor (no hecha 10/11)",
-    "[HOY Mie 11] - [>] Gestion internet (no hecha 10/11)",
-    "[MANANA Jue 12] - [ ] Lectura diaria",
-    "[MANANA Jue 12] - [ ] RMA + commissioning (prioridad 4)"
+    "- [ ] 📚 Lectura diaria 23/11",
+    "- [ ] 🧱 B1+B2 — cerrar arrastres: SOP/MOP + DCIM + CLI intermedio + Fierros 20%/RMA *(prio",
+    "- [ ] 📄 EPS Sura a Francy — vía WhatsApp (cierre definitivo, rápida)",
+    "- [ ] 📢 Meta Ads — definir nicho (si queda bloque, si no → Mar 24)",
+    "- [ ] 📚 Lectura diaria",
+    "- [ ] 📢 Meta Ads — definir nicho (1 bloque, cierre)",
+    "- [ ] 🧱 Repaso B1/B2 pendiente (si algo arrastra del Lun 23)",
+    "- [ ] 🔬 Prototipo X — decidir sensor HC-SR04 vs LD2410 (adelanto si hay energía, si no → M",
+    "- [ ] 📕 Playbooks FABRICATO (nuevo, 74 racks · 637 eq · 10.049 cables) — 22:00: playbook x",
+    "- [ ] Aumentar presupuesto alimentario personal",
+    "- [ ] Balanceo de progreso y profundización de pilares",
+    "- [ ] Purgar teléfono de apps y videos"
   ]
 }
